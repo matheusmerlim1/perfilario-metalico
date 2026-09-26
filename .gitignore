@@ -1,0 +1,18 @@
+# Credenciais e segredos
+.env
+*.env
+secrets.json
+token.txt
+
+# Documentos (tabela de bitolas do fabricante)
+*.pdf
+
+# Dependencias
+node_modules/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Guias locais
+githubGuia.md
