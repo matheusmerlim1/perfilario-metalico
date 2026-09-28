@@ -1,0 +1,3927 @@
+{
+ "fonte": "Tenax Aço e Ferro Ltda. — Chapas e Placas de Aço",
+ "familias": [
+  {
+   "id": "tenax-chapa-laminada-quente",
+   "grupo": "Chapas",
+   "label": "Laminada a quente",
+   "titulo": "Chapa de aço laminada a quente (finas a quente, grossas e placas)",
+   "desc": "Chapas finas a quente, chapas grossas e placas de aço carbono e baixa liga, para construção civil e naval, plataformas marítimas, tubos de grande diâmetro, caldeiras, vasos de pressão, máquinas e implementos.",
+   "icone": "chapa",
+   "massa": [
+    "m",
+    "kg/m²",
+    "Massa por área"
+   ],
+   "props": {
+    "bit": [
+     "Bitola",
+     "",
+     "Bitola MSG / polegada",
+     "Dimensões"
+    ],
+    "e": [
+     "e",
+     "mm",
+     "Espessura",
+     "Dimensões"
+    ]
+   },
+   "itens": [
+    {
+     "nome": "Nº 16 (1,52 mm)",
+     "sub": "bitola MSG",
+     "m": 11.95,
+     "p": {
+      "bit": "MSG nº 16",
+      "e": 1.52
+     }
+    },
+    {
+     "nome": "Nº 14 (1,90 mm)",
+     "sub": "bitola MSG",
+     "m": 14.94,
+     "p": {
+      "bit": "MSG nº 14",
+      "e": 1.9
+     }
+    },
+    {
+     "nome": "Nº 13 (2,28 mm)",
+     "sub": "bitola MSG",
+     "m": 17.92,
+     "p": {
+      "bit": "MSG nº 13",
+      "e": 2.28
+     }
+    },
+    {
+     "nome": "Nº 12 (2,66 mm)",
+     "sub": "bitola MSG",
+     "m": 20.91,
+     "p": {
+      "bit": "MSG nº 12",
+      "e": 2.66
+     }
+    },
+    {
+     "nome": "Nº 11 (3,04 mm)",
+     "sub": "bitola MSG",
+     "m": 23.9,
+     "p": {
+      "bit": "MSG nº 11",
+      "e": 3.04
+     }
+    },
+    {
+     "nome": "Nº 10 (3,42 mm)",
+     "sub": "bitola MSG",
+     "m": 26.89,
+     "p": {
+      "bit": "MSG nº 10",
+      "e": 3.42
+     }
+    },
+    {
+     "nome": "Nº 9 (3,80 mm)",
+     "sub": "bitola MSG",
+     "m": 29.87,
+     "p": {
+      "bit": "MSG nº 9",
+      "e": 3.8
+     }
+    },
+    {
+     "nome": "Nº 8 (4,18 mm)",
+     "sub": "bitola MSG",
+     "m": 32.86,
+     "p": {
+      "bit": "MSG nº 8",
+      "e": 4.18
+     }
+    },
+    {
+     "nome": "Nº 7 (4,55 mm)",
+     "sub": "bitola MSG",
+     "m": 35.77,
+     "p": {
+      "bit": "MSG nº 7",
+      "e": 4.55
+     }
+    },
+    {
+     "nome": "3/16\" (4,75 mm)",
+     "sub": "polegada",
+     "m": 37.34,
+     "p": {
+      "bit": "3/16\"",
+      "e": 4.75
+     }
+    },
+    {
+     "nome": "1/4\" (6,35 mm)",
+     "sub": "polegada",
+     "m": 49.92,
+     "p": {
+      "bit": "1/4\"",
+      "e": 6.35
+     }
+    },
+    {
+     "nome": "5/16\" (7,94 mm)",
+     "sub": "polegada",
+     "m": 62.4,
+     "p": {
+      "bit": "5/16\"",
+      "e": 7.94
+     }
+    },
+    {
+     "nome": "3/8\" (9,52 mm)",
+     "sub": "polegada",
+     "m": 74.82,
+     "p": {
+      "bit": "3/8\"",
+      "e": 9.52
+     }
+    },
+    {
+     "nome": "7/16\" (11,11 mm)",
+     "sub": "polegada",
+     "m": 87.32,
+     "p": {
+      "bit": "7/16\"",
+      "e": 11.11
+     }
+    },
+    {
+     "nome": "1/2\" (12,70 mm)",
+     "sub": "polegada",
+     "m": 99.82,
+     "p": {
+      "bit": "1/2\"",
+      "e": 12.7
+     }
+    },
+    {
+     "nome": "9/16\" (14,28 mm)",
+     "sub": "polegada",
+     "m": 112.24,
+     "p": {
+      "bit": "9/16\"",
+      "e": 14.28
+     }
+    },
+    {
+     "nome": "5/8\" (15,87 mm)",
+     "sub": "polegada",
+     "m": 124.73,
+     "p": {
+      "bit": "5/8\"",
+      "e": 15.87
+     }
+    },
+    {
+     "nome": "11/16\" (17,46 mm)",
+     "sub": "polegada",
+     "m": 137.23,
+     "p": {
+      "bit": "11/16\"",
+      "e": 17.46
+     }
+    },
+    {
+     "nome": "3/4\" (19,05 mm)",
+     "sub": "polegada",
+     "m": 149.73,
+     "p": {
+      "bit": "3/4\"",
+      "e": 19.05
+     }
+    },
+    {
+     "nome": "13/16\" (20,63 mm)",
+     "sub": "polegada",
+     "m": 162.15,
+     "p": {
+      "bit": "13/16\"",
+      "e": 20.63
+     }
+    },
+    {
+     "nome": "7/8\" (22,22 mm)",
+     "sub": "polegada",
+     "m": 174.64,
+     "p": {
+      "bit": "7/8\"",
+      "e": 22.22
+     }
+    },
+    {
+     "nome": "15/16\" (23,81 mm)",
+     "sub": "polegada",
+     "m": 187.14,
+     "p": {
+      "bit": "15/16\"",
+      "e": 23.81
+     }
+    },
+    {
+     "nome": "1\" (25,40 mm)",
+     "sub": "polegada",
+     "m": 199.64,
+     "p": {
+      "bit": "1\"",
+      "e": 25.4
+     }
+    },
+    {
+     "nome": "1 1/8\" (28,57 mm)",
+     "sub": "polegada",
+     "m": 224.56,
+     "p": {
+      "bit": "1 1/8\"",
+      "e": 28.57
+     }
+    },
+    {
+     "nome": "1 1/4\" (31,75 mm)",
+     "sub": "polegada",
+     "m": 249.55,
+     "p": {
+      "bit": "1 1/4\"",
+      "e": 31.75
+     }
+    },
+    {
+     "nome": "1 3/8\" (34,92 mm)",
+     "sub": "polegada",
+     "m": 274.47,
+     "p": {
+      "bit": "1 3/8\"",
+      "e": 34.92
+     }
+    },
+    {
+     "nome": "1 1/2\" (38,1 mm)",
+     "sub": "polegada",
+     "m": 299.46,
+     "p": {
+      "bit": "1 1/2\"",
+      "e": 38.1
+     }
+    },
+    {
+     "nome": "1 5/8\" (41,28 mm)",
+     "sub": "polegada",
+     "m": 324.45,
+     "p": {
+      "bit": "1 5/8\"",
+      "e": 41.28
+     }
+    },
+    {
+     "nome": "1 3/4\" (44,45 mm)",
+     "sub": "polegada",
+     "m": 349.37,
+     "p": {
+      "bit": "1 3/4\"",
+      "e": 44.45
+     }
+    },
+    {
+     "nome": "1 7/8\" (47,62 mm)",
+     "sub": "polegada",
+     "m": 374.29,
+     "p": {
+      "bit": "1 7/8\"",
+      "e": 47.62
+     }
+    },
+    {
+     "nome": "2\" (50,8 mm)",
+     "sub": "polegada",
+     "m": 399.28,
+     "p": {
+      "bit": "2\"",
+      "e": 50.8
+     }
+    },
+    {
+     "nome": "2 1/4\" (57,15 mm)",
+     "sub": "polegada",
+     "m": 449.2,
+     "p": {
+      "bit": "2 1/4\"",
+      "e": 57.15
+     }
+    },
+    {
+     "nome": "2 1/2\" (63,5 mm)",
+     "sub": "polegada",
+     "m": 499.11,
+     "p": {
+      "bit": "2 1/2\"",
+      "e": 63.5
+     }
+    },
+    {
+     "nome": "2 3/4\" (69,85 mm)",
+     "sub": "polegada",
+     "m": 549.02,
+     "p": {
+      "bit": "2 3/4\"",
+      "e": 69.85
+     }
+    },
+    {
+     "nome": "3\" (76,2 mm)",
+     "sub": "polegada",
+     "m": 598.93,
+     "p": {
+      "bit": "3\"",
+      "e": 76.2
+     }
+    },
+    {
+     "nome": "3 1/4\" (82,55 mm)",
+     "sub": "polegada",
+     "m": 648.84,
+     "p": {
+      "bit": "3 1/4\"",
+      "e": 82.55
+     }
+    },
+    {
+     "nome": "3 1/2\" (88,9 mm)",
+     "sub": "polegada",
+     "m": 698.75,
+     "p": {
+      "bit": "3 1/2\"",
+      "e": 88.9
+     }
+    },
+    {
+     "nome": "3 3/4\" (95,25 mm)",
+     "sub": "polegada",
+     "m": 748.66,
+     "p": {
+      "bit": "3 3/4\"",
+      "e": 95.25
+     }
+    },
+    {
+     "nome": "4\" (101,6 mm)",
+     "sub": "polegada",
+     "m": 798.57,
+     "p": {
+      "bit": "4\"",
+      "e": 101.6
+     }
+    },
+    {
+     "nome": "4 1/2\" (114,3 mm)",
+     "sub": "polegada",
+     "m": 898.38,
+     "p": {
+      "bit": "4 1/2\"",
+      "e": 114.3
+     }
+    },
+    {
+     "nome": "5\" (127 mm)",
+     "sub": "polegada",
+     "m": 998.2,
+     "p": {
+      "bit": "5\"",
+      "e": 127
+     }
+    },
+    {
+     "nome": "5 1/2\" (139,7 mm)",
+     "sub": "polegada",
+     "m": 1098,
+     "p": {
+      "bit": "5 1/2\"",
+      "e": 139.7
+     }
+    },
+    {
+     "nome": "6\" (152,4 mm)",
+     "sub": "polegada",
+     "m": 1197.8,
+     "p": {
+      "bit": "6\"",
+      "e": 152.4
+     }
+    },
+    {
+     "nome": "6 1/2\" (165,1 mm)",
+     "sub": "polegada",
+     "m": 1297.7,
+     "p": {
+      "bit": "6 1/2\"",
+      "e": 165.1
+     }
+    },
+    {
+     "nome": "7\" (177,8 mm)",
+     "sub": "polegada",
+     "m": 1397.5,
+     "p": {
+      "bit": "7\"",
+      "e": 177.8
+     }
+    },
+    {
+     "nome": "7 1/2\" (190,5 mm)",
+     "sub": "polegada",
+     "m": 1497.3,
+     "p": {
+      "bit": "7 1/2\"",
+      "e": 190.5
+     }
+    },
+    {
+     "nome": "8\" (203,2 mm)",
+     "sub": "polegada",
+     "m": 1597.1,
+     "p": {
+      "bit": "8\"",
+      "e": 203.2
+     }
+    },
+    {
+     "nome": "9\" (228,6 mm)",
+     "sub": "polegada",
+     "m": 1796.8,
+     "p": {
+      "bit": "9\"",
+      "e": 228.6
+     }
+    },
+    {
+     "nome": "10\" (254 mm)",
+     "sub": "polegada",
+     "m": 1996.4,
+     "p": {
+      "bit": "10\"",
+      "e": 254
+     }
+    },
+    {
+     "nome": "11\" (279,4 mm)",
+     "sub": "polegada",
+     "m": 2196.1,
+     "p": {
+      "bit": "11\"",
+      "e": 279.4
+     }
+    },
+    {
+     "nome": "12\" (304,8 mm)",
+     "sub": "polegada",
+     "m": 2395.7,
+     "p": {
+      "bit": "12\"",
+      "e": 304.8
+     }
+    },
+    {
+     "nome": "13\" (330,2 mm)",
+     "sub": "polegada",
+     "m": 2595.3,
+     "p": {
+      "bit": "13\"",
+      "e": 330.2
+     }
+    },
+    {
+     "nome": "14\" (355,6 mm)",
+     "sub": "polegada",
+     "m": 2795,
+     "p": {
+      "bit": "14\"",
+      "e": 355.6
+     }
+    },
+    {
+     "nome": "15\" (381 mm)",
+     "sub": "polegada",
+     "m": 2994.6,
+     "p": {
+      "bit": "15\"",
+      "e": 381
+     }
+    },
+    {
+     "nome": "16\" (406,4 mm)",
+     "sub": "polegada",
+     "m": 3194.3,
+     "p": {
+      "bit": "16\"",
+      "e": 406.4
+     }
+    }
+   ],
+   "notas": [
+    "Bitolas finas a quente e grossas: nº 16 (1,50 mm) a 6\"; placas: 4\" a 16\" (pág. 2).",
+    "Chapa xadrez citada na pág. 2 (bitolas 1/8\" a 3/8\"), sem tabela de pesos própria no catálogo.",
+    "Graus de aço disponíveis sob consulta: ver lista de materiais (SAE J403, USI, ASTM, EN, JIS, IRAM, NBR, API, naval).",
+    "Fornecimento: inteiras ou cortadas em retângulos, discos, anéis e esboços (pág. 2).",
+    "As colunas de peso (laminada a quente, laminada a frio e galvanizada) vêm da mesma 'Tabela de Pesos' (pág. 17); onde o catálogo traz '-' a bitola não consta para aquele tipo."
+   ],
+   "paginas": [
+    2,
+    17
+   ]
+  },
+  {
+   "id": "tenax-chapa-fina-frio",
+   "grupo": "Chapas",
+   "label": "Fina a frio",
+   "titulo": "Chapa fina de aço laminada a frio",
+   "desc": "Chapas finas laminadas a frio, em bitolas MSG nº 30 a nº 11, para usos gerais de caldeiraria leve e estampagem.",
+   "icone": "chapa",
+   "massa": [
+    "m",
+    "kg/m²",
+    "Massa por área"
+   ],
+   "props": {
+    "bit": [
+     "Bitola",
+     "",
+     "Bitola MSG / polegada",
+     "Dimensões"
+    ],
+    "e": [
+     "e",
+     "mm",
+     "Espessura",
+     "Dimensões"
+    ]
+   },
+   "itens": [
+    {
+     "nome": "Nº 30 (0,30 mm)",
+     "sub": "bitola MSG",
+     "m": 2.4,
+     "p": {
+      "bit": "MSG nº 30",
+      "e": 0.3
+     }
+    },
+    {
+     "nome": "Nº 28 (0,38 mm)",
+     "sub": "bitola MSG",
+     "m": 3.04,
+     "p": {
+      "bit": "MSG nº 28",
+      "e": 0.38
+     }
+    },
+    {
+     "nome": "Nº 26 (0,46 mm)",
+     "sub": "bitola MSG",
+     "m": 3.68,
+     "p": {
+      "bit": "MSG nº 26",
+      "e": 0.46
+     }
+    },
+    {
+     "nome": "Nº 24 (0,61 mm)",
+     "sub": "bitola MSG",
+     "m": 4.88,
+     "p": {
+      "bit": "MSG nº 24",
+      "e": 0.61
+     }
+    },
+    {
+     "nome": "Nº 22 (0,76 mm)",
+     "sub": "bitola MSG",
+     "m": 6.08,
+     "p": {
+      "bit": "MSG nº 22",
+      "e": 0.76
+     }
+    },
+    {
+     "nome": "Nº 20 (0,91 mm)",
+     "sub": "bitola MSG",
+     "m": 7.28,
+     "p": {
+      "bit": "MSG nº 20",
+      "e": 0.91
+     }
+    },
+    {
+     "nome": "Nº 18 (1,21 mm)",
+     "sub": "bitola MSG",
+     "m": 9.68,
+     "p": {
+      "bit": "MSG nº 18",
+      "e": 1.21
+     }
+    },
+    {
+     "nome": "Nº 16 (1,52 mm)",
+     "sub": "bitola MSG",
+     "m": 12.16,
+     "p": {
+      "bit": "MSG nº 16",
+      "e": 1.52
+     }
+    },
+    {
+     "nome": "Nº 14 (1,90 mm)",
+     "sub": "bitola MSG",
+     "m": 15.2,
+     "p": {
+      "bit": "MSG nº 14",
+      "e": 1.9
+     }
+    },
+    {
+     "nome": "Nº 13 (2,28 mm)",
+     "sub": "bitola MSG",
+     "m": 18.24,
+     "p": {
+      "bit": "MSG nº 13",
+      "e": 2.28
+     }
+    },
+    {
+     "nome": "Nº 12 (2,66 mm)",
+     "sub": "bitola MSG",
+     "m": 21.28,
+     "p": {
+      "bit": "MSG nº 12",
+      "e": 2.66
+     }
+    },
+    {
+     "nome": "Nº 11 (3,04 mm)",
+     "sub": "bitola MSG",
+     "m": 24.32,
+     "p": {
+      "bit": "MSG nº 11",
+      "e": 3.04
+     }
+    }
+   ],
+   "notas": [
+    "Bitolas finas a frio: nº 30 (0,30 mm) a nº 11 (3,00 mm) segundo a pág. 2; na tabela de pesos o nº 11 aparece como 3,04 mm.",
+    "Fornecimento: inteiras ou cortadas em retângulos, discos, anéis e esboços (pág. 2).",
+    "As colunas de peso (laminada a quente, laminada a frio e galvanizada) vêm da mesma 'Tabela de Pesos' (pág. 17); onde o catálogo traz '-' a bitola não consta para aquele tipo."
+   ],
+   "paginas": [
+    2,
+    17
+   ]
+  },
+  {
+   "id": "tenax-chapa-galvanizada",
+   "grupo": "Chapas",
+   "label": "Galvanizada",
+   "titulo": "Chapa de aço galvanizada",
+   "desc": "Chapas finas de aço galvanizadas (revestidas de zinco), em bitolas MSG nº 30 a nº 11, para aplicações que exigem proteção contra corrosão.",
+   "icone": "chapa",
+   "massa": [
+    "m",
+    "kg/m²",
+    "Massa por área"
+   ],
+   "props": {
+    "bit": [
+     "Bitola",
+     "",
+     "Bitola MSG / polegada",
+     "Dimensões"
+    ],
+    "e": [
+     "e",
+     "mm",
+     "Espessura",
+     "Dimensões"
+    ]
+   },
+   "itens": [
+    {
+     "nome": "Nº 30 (0,30 mm)",
+     "sub": "bitola MSG",
+     "m": 2.8,
+     "p": {
+      "bit": "MSG nº 30",
+      "e": 0.3
+     }
+    },
+    {
+     "nome": "Nº 28 (0,38 mm)",
+     "sub": "bitola MSG",
+     "m": 3.44,
+     "p": {
+      "bit": "MSG nº 28",
+      "e": 0.38
+     }
+    },
+    {
+     "nome": "Nº 26 (0,46 mm)",
+     "sub": "bitola MSG",
+     "m": 4,
+     "p": {
+      "bit": "MSG nº 26",
+      "e": 0.46
+     }
+    },
+    {
+     "nome": "Nº 24 (0,61 mm)",
+     "sub": "bitola MSG",
+     "m": 5.2,
+     "p": {
+      "bit": "MSG nº 24",
+      "e": 0.61
+     }
+    },
+    {
+     "nome": "Nº 22 (0,76 mm)",
+     "sub": "bitola MSG",
+     "m": 6.4,
+     "p": {
+      "bit": "MSG nº 22",
+      "e": 0.76
+     }
+    },
+    {
+     "nome": "Nº 20 (0,91 mm)",
+     "sub": "bitola MSG",
+     "m": 7.6,
+     "p": {
+      "bit": "MSG nº 20",
+      "e": 0.91
+     }
+    },
+    {
+     "nome": "Nº 18 (1,21 mm)",
+     "sub": "bitola MSG",
+     "m": 10,
+     "p": {
+      "bit": "MSG nº 18",
+      "e": 1.21
+     }
+    },
+    {
+     "nome": "Nº 16 (1,52 mm)",
+     "sub": "bitola MSG",
+     "m": 12.4,
+     "p": {
+      "bit": "MSG nº 16",
+      "e": 1.52
+     }
+    },
+    {
+     "nome": "Nº 14 (1,90 mm)",
+     "sub": "bitola MSG",
+     "m": 15.6,
+     "p": {
+      "bit": "MSG nº 14",
+      "e": 1.9
+     }
+    },
+    {
+     "nome": "Nº 13 (2,28 mm)",
+     "sub": "bitola MSG",
+     "m": 18.4,
+     "p": {
+      "bit": "MSG nº 13",
+      "e": 2.28
+     }
+    },
+    {
+     "nome": "Nº 12 (2,66 mm)",
+     "sub": "bitola MSG",
+     "m": 21.6,
+     "p": {
+      "bit": "MSG nº 12",
+      "e": 2.66
+     }
+    },
+    {
+     "nome": "Nº 11 (3,04 mm)",
+     "sub": "bitola MSG",
+     "m": 24.64,
+     "p": {
+      "bit": "MSG nº 11",
+      "e": 3.04
+     }
+    }
+   ],
+   "notas": [
+    "Bitolas galvanizadas: nº 30 (0,30 mm) a nº 11 (3,00 mm) segundo a pág. 2; na tabela de pesos o nº 11 aparece como 3,04 mm.",
+    "Fornecimento: inteiras ou cortadas em retângulos, discos, anéis e esboços (pág. 2).",
+    "As colunas de peso (laminada a quente, laminada a frio e galvanizada) vêm da mesma 'Tabela de Pesos' (pág. 17); onde o catálogo traz '-' a bitola não consta para aquele tipo."
+   ],
+   "paginas": [
+    2,
+    17
+   ]
+  }
+ ],
+ "materiais": [
+  {
+   "nome": "USI-GV",
+   "tipo": "aço carbono",
+   "norma": "USI-GV",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,08 máx.",
+    "Mn": "0,45 máx.",
+    "Si": "0,020 máx.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1006",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,80 máx.",
+    "Mn": "0,45 máx.",
+    "Si": "0,10 máx.",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs. transcrição": "C impresso como '0,80 máx.' (provável erro de digitação para 0,08).",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1008",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,10 máx.",
+    "Mn": "0,50 máx.",
+    "Si": "0,10 máx.",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1010",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,08 - 0,13",
+    "Mn": "0,30 - 0,60",
+    "Si": "0,10 máx.",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1012",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,10 - 0,15",
+    "Mn": "0,30 - 0,60",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1015",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,13 - 0,18",
+    "Mn": "0,30 - 0,60",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1020",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,18 - 0,23",
+    "Mn": "0,30 - 0,60",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1021",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,18 - 0,23",
+    "Mn": "0,60 - 0,90",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1023",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,20 - 0,25",
+    "Mn": "0,30 - 0,60",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1025",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,22 - 0,28",
+    "Mn": "0,30 - 0,60",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1030",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,28 - 0,34",
+    "Mn": "0,60 - 0,90",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1035",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,32 - 0,38",
+    "Mn": "0,60 - 0,90",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1040",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,37 - 0,44",
+    "Mn": "0,60 - 0,90",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1045",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,43 - 0,50",
+    "Mn": "0,60 - 0,90",
+    "Si": "não informado (célula vazia)",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1050",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,48 - 0,55",
+    "Mn": "0,60 - 0,90",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1055",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,50 - 0,60",
+    "Mn": "0,60 - 0,90",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1060",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,55 - 0,65",
+    "Mn": "0,60 - 0,90",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1065",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,60 - 0,70",
+    "Mn": "0,60 - 0,90",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1070",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,65 - 0,75",
+    "Mn": "0,60 - 0,90",
+    "Si": "0,15 - 0,35",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "SAE 1524",
+   "tipo": "aço carbono",
+   "norma": "SAE J403",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,19 - 0,25",
+    "Mn": "1,35 - 1,65",
+    "Si": "0,15 - 0,30",
+    "P": "0,030 máx.",
+    "S": "0,050 máx.",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço para uso geral (chapas grossas).",
+   "fonte": "Tenax, pág. 3"
+  },
+  {
+   "nome": "NV-OS-101 A32",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,36 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "440 ~ 590 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 16; 10-15: 17; 15-20: 18; 20-25: 19; 25-30: 20; 30-40: 21; 40-50: 22 (BM 200); 22 (BM 5,65√So)",
+    "Charpy V": "0 °C, média 31 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 D32",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,36 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "440 ~ 590 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 16; 10-15: 17; 15-20: 18; 20-25: 19; 25-30: 20; 30-40: 21; 40-50: 22 (BM 200); 22 (BM 5,65√So)",
+    "Charpy V": "-20 °C, média 31 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 E32",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,36 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "440 ~ 590 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 16; 10-15: 17; 15-20: 18; 20-25: 19; 25-30: 20; 30-40: 21; 40-50: 22 (BM 200); 22 (BM 5,65√So)",
+    "Charpy V": "-40 °C, média 31 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 A36",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,38 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "490 ~ 620 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 15; 10-15: 16; 15-20: 17; 20-25: 18; 25-30: 19; 30-40: 20; 40-50: 21 (BM 200); 21 (BM 5,65√So)",
+    "Charpy V": "0 °C, média 34 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 D36",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,38 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "490 ~ 620 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 15; 10-15: 16; 15-20: 17; 20-25: 18; 25-30: 19; 30-40: 20; 40-50: 21 (BM 200); 21 (BM 5,65√So)",
+    "Charpy V": "-20 °C, média 34 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 E36",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,38 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "490 ~ 620 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10: 15; 10-15: 16; 15-20: 17; 20-25: 18; 25-30: 19; 30-40: 20; 40-50: 21 (BM 200); 21 (BM 5,65√So)",
+    "Charpy V": "-40 °C, média 34 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 A40",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,40 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "510 ~ 650 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10 a 40-50: 14, 15, 16, 17, 18, 19 (BM 200; 7 faixas e 6 valores, conforme impresso); 21 (BM 5,65√So)",
+    "Charpy V": "0 °C, média 41 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 D40",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,40 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "510 ~ 650 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10 a 40-50: 14, 15, 16, 17, 18, 19 (BM 200; 7 faixas e 6 valores, conforme impresso); 21 (BM 5,65√So)",
+    "Charpy V": "-20 °C, média 41 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "NV-OS-101 E40",
+   "tipo": "aço estrutural offshore",
+   "norma": "NV-OS-101 (DNV)",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,10 - 0,50",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Al, Ni, Cu, Cr, Mo, V, Ti, Nb conforme norma",
+    "Ceq": "0,40 máx. (C+Mn/6+(Cr+Mo+V)/5+(Ni+Cu)/15)",
+    "LR": "510 ~ 650 MPa",
+    "Direção ensaio tração": "transversal",
+    "Alongamento % por espessura (mm)": "5-10 a 40-50: 14, 15, 16, 17, 18, 19 (BM 200; 7 faixas e 6 valores, conforme impresso); 21 (BM 5,65√So)",
+    "Charpy V": "-40 °C, média 41 J, longitudinal",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "BS 4360 43 EE",
+   "tipo": "aço estrutural offshore",
+   "norma": "BS 4360",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "BS 4360 50 D",
+   "tipo": "aço estrutural offshore",
+   "norma": "BS 4360",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "API 2H 50",
+   "tipo": "aço estrutural offshore",
+   "norma": "API 2H",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "API 2W 50",
+   "tipo": "aço estrutural offshore",
+   "norma": "API 2W",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Plataformas marítimas (fixas, semissubmersíveis, TLP, FPSO, autoelevatórias, navios-sonda) com soldagem de alto aporte térmico.",
+   "fonte": "Tenax, pág. 4"
+  },
+  {
+   "nome": "USI SAC 300",
+   "tipo": "aço patinável",
+   "norma": "USI SAC",
+   "rho": null,
+   "fy": 300,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,20 máx.",
+    "Si": "0,50 - 1,50",
+    "Mn": "1,50 máx.",
+    "P": "0,010 - 0,060",
+    "S": "0,020 máx.",
+    "Cu": "0,05 - 0,40",
+    "Cr": "≤ 0,60",
+    "LR": "400 - 550 MPa",
+    "Dobramento": "T, calço 1,5E",
+    "Alongamento": "16 % (BM 200); pode variar com base de medida e espessura",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço resistente à corrosão atmosférica: edifícios, pontes, implementos agrícolas, mineração, vagões.",
+   "fonte": "Tenax, pág. 5"
+  },
+  {
+   "nome": "USI SAC 350",
+   "tipo": "aço patinável",
+   "norma": "USI SAC",
+   "rho": null,
+   "fy": 350,
+   "fu": 500,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,25 máx.",
+    "Si": "0,50 - 1,50",
+    "Mn": "1,50 máx.",
+    "P": "0,010 - 0,060",
+    "S": "0,020 máx.",
+    "Cu": "0,05 - 0,40",
+    "Cr": "≤ 0,60",
+    "LR": "500 - 650 MPa",
+    "Dobramento": "T, calço 1,5E",
+    "Alongamento": "16 % (BM 200); pode variar com base de medida e espessura",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço resistente à corrosão atmosférica: edifícios, pontes, implementos agrícolas, mineração, vagões.",
+   "fonte": "Tenax, pág. 5"
+  },
+  {
+   "nome": "ASTM A242 Tipo 1",
+   "tipo": "aço patinável",
+   "norma": "ASTM A242",
+   "rho": null,
+   "fy": 345,
+   "fu": 480,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,15 máx.",
+    "Si": "-",
+    "Mn": "1,00 máx.",
+    "P": "0,15 máx.",
+    "S": "0,05 máx.",
+    "Cu": "≥ 0,20",
+    "Cr": "-",
+    "LE / LR por espessura": "6,00-19,50: 345 / 480 mín.; 19,51-38,10: 315 / 460 mín.; 38,11-101,60: 290 / 435 mín. (MPa)",
+    "Alongamento": "16 % (BM 200); pode variar com base de medida e espessura",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço resistente à corrosão atmosférica: edifícios, pontes, implementos agrícolas, mineração, vagões.",
+   "fonte": "Tenax, pág. 5"
+  },
+  {
+   "nome": "ASTM A588 Gr. B",
+   "tipo": "aço patinável",
+   "norma": "ASTM A588",
+   "rho": null,
+   "fy": 345,
+   "fu": 485,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,20 máx.",
+    "Si": "0,15 - 0,50",
+    "Mn": "0,75 - 1,35",
+    "P": "0,040 máx.",
+    "S": "0,05 máx.",
+    "Cu": "0,20 - 0,40",
+    "Cr": "0,40 - 0,70",
+    "LR": "485 mín. MPa",
+    "Alongamento": "16 % (BM 200); pode variar com base de medida e espessura",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço resistente à corrosão atmosférica: edifícios, pontes, implementos agrícolas, mineração, vagões.",
+   "fonte": "Tenax, pág. 5"
+  },
+  {
+   "nome": "ASTM A285 Gr. A",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A285",
+   "rho": null,
+   "fy": 165,
+   "fu": 310,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,17 máx.",
+    "Mn": "0,90 máx.",
+    "Si": "-",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "310 - 450 MPa",
+    "Alongamento": "27 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "grau típico da classe LE mín. 165 MPa – baixa pressão",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7016, E7018; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T-1, E71T-4 e E71T-5 (CO2); arco submerso F7xxEL12, F7xx-EM12k",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A285 Gr. B",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A285",
+   "rho": null,
+   "fy": 185,
+   "fu": 345,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,22 máx.",
+    "Mn": "0,90 máx.",
+    "Si": "-",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "345 - 485 MPa",
+    "Alongamento": "25 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 165 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7016, E7018; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T-1, E71T-4 e E71T-5 (CO2); arco submerso F7xxEL12, F7xx-EM12k",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A285 Gr. C",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A285",
+   "rho": null,
+   "fy": 205,
+   "fu": 380,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,28 máx.",
+    "Mn": "0,90 máx.",
+    "Si": "-",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "380 - 515 MPa",
+    "Alongamento": "23 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7016, E7018; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T-1, E71T-4 e E71T-5 (CO2); arco submerso F7xxEL12, F7xx-EM12k",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A299 Gr. A",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A299",
+   "rho": null,
+   "fy": 290,
+   "fu": 515,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,26 máx. (≤25,40) / 0,28 máx. (>25,40)",
+    "Mn": "0,90 - 1,40 (≤25,40) / 0,90 - 1,50 (>25,40)",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "290 mín. (≤25,40) / 275 mín. (25,40-50,80) MPa",
+    "LR": "515 - 655 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 260 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7016, E7018; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T-1, E71T-4 e E71T-5 (CO2); arco submerso F7xxEL12, F7xx-EM12k",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A299 Gr. B",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A299",
+   "rho": null,
+   "fy": 325,
+   "fu": 550,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,28 máx. (≤25,40) / 0,30 máx. (>25,40)",
+    "Mn": "0,90 - 1,40 (≤25,40) / 0,90 - 1,50 (>25,40)",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "325 mín. (≤25,40) / 310 mín. (25,40-50,80) MPa",
+    "LR": "550 - 690 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 260 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7016, E7018; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T-1, E71T-4 e E71T-5 (CO2); arco submerso F7xxEL12, F7xx-EM12k",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A455",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A455",
+   "rho": null,
+   "fy": 260,
+   "fu": 515,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 19,05 mm",
+    "C": "0,33 máx.",
+    "Mn": "0,85 - 1,20",
+    "Si": "0,10 máx.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE / LR por espessura": "6,00-9,53: 260 / 515-655; 9,53-14,70: 255 / 505-640; 14,70-19,05: 240 / 485-620 (MPa)",
+    "Alongamento": "15 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-7"
+  },
+  {
+   "nome": "ASTM A515 Gr. 60",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A515",
+   "rho": null,
+   "fy": 220,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,24 máx. (≤25,40) / 0,27 máx. (25,40-50,80) / 0,29 máx. (50,80-76,20)",
+    "Mn": "0,90 máx.",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "415 - 550 MPa",
+    "Alongamento": "21 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-A1, E7018-G; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T1-G e E81T1-B1 (CO2 ou Ar+CO, conforme impresso); arco submerso F7xx-EA1-A1, F7xx-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A515 Gr. 65",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A515",
+   "rho": null,
+   "fy": 240,
+   "fu": 450,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,28 máx. (≤25,40) / 0,31 máx. (25,40-50,80) / 0,33 máx. (50,80-76,20)",
+    "Mn": "0,90 máx.",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "450 - 585 MPa",
+    "Alongamento": "19 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-A1, E7018-G; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T1-G e E81T1-B1 (CO2 ou Ar+CO, conforme impresso); arco submerso F7xx-EA1-A1, F7xx-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A515 Gr. 70",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A515",
+   "rho": null,
+   "fy": 260,
+   "fu": 485,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,31 máx. (≤25,40) / 0,33 máx. (25,40-50,80) / 0,35 máx. (50,80-76,20)",
+    "Mn": "1,20 máx.",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "485 - 620 MPa",
+    "Alongamento": "17 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 260 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-A1, E7018-G; MIG/MAG ER70S-3 e ER70S-6 (CO2 ou Ar+CO2 ou Ar+O2); arame tubular E71T1-G e E81T1-B1 (CO2 ou Ar+CO, conforme impresso); arco submerso F7xx-EA1-A1, F7xx-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A516 Gr. 55",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A516",
+   "rho": null,
+   "fy": 205,
+   "fu": 380,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,18 máx. (≤12,70) / 0,20 máx. (12,70-50,80) / 0,22 máx. (50,80-76,20)",
+    "Mn": "0,60 - 0,90 (≤12,70) / 0,60 - 1,20 (>12,70)",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "380 - 515 MPa",
+    "Alongamento": "23 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 165 MPa – baixa pressão",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-M, E8018-D3 e E8018-C1; MIG/MAG ER70S-G, ER80S-Ni1 e ER80S-G (Ar + 1~5% O2); arame tubular E80T5-Ni1 e E80T5-N (CO2 ou Ar+CO2); arco submerso F7P6-EA3-A3, F7P6-ENi1-Ni1, F7P6-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A516 Gr. 60",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A516",
+   "rho": null,
+   "fy": 220,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,21 máx. (≤12,70) / 0,23 máx. (12,70-50,80) / 0,25 máx. (50,80-76,20)",
+    "Mn": "0,60 - 0,90 (≤12,70) / 0,85 - 1,20 (>12,70)",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "415 - 550 MPa",
+    "Alongamento": "21 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "grau típico da classe LE mín. 220 MPa – média pressão",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-M, E8018-D3 e E8018-C1; MIG/MAG ER70S-G, ER80S-Ni1 e ER80S-G (Ar + 1~5% O2); arame tubular E80T5-Ni1 e E80T5-N (CO2 ou Ar+CO2); arco submerso F7P6-EA3-A3, F7P6-ENi1-Ni1, F7P6-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A516 Gr. 65",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A516",
+   "rho": null,
+   "fy": 240,
+   "fu": 450,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,24 máx. (≤12,70) / 0,26 máx. (12,70-50,80) / 0,28 máx. (50,80-76,20)",
+    "Mn": "0,85 - 1,20",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "450 - 585 MPa",
+    "Alongamento": "19 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-M, E8018-D3 e E8018-C1; MIG/MAG ER70S-G, ER80S-Ni1 e ER80S-G (Ar + 1~5% O2); arame tubular E80T5-Ni1 e E80T5-N (CO2 ou Ar+CO2); arco submerso F7P6-EA3-A3, F7P6-ENi1-Ni1, F7P6-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A516 Gr. 70",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A516",
+   "rho": null,
+   "fy": 260,
+   "fu": 485,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,27 máx. (≤12,70) / 0,28 máx. (12,70-50,80) / 0,30 máx. (50,80-76,20)",
+    "Mn": "0,85 - 1,20",
+    "Si": "0,15 - 0,40",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "485 - 620 MPa",
+    "Alongamento": "17 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "grau típico da classe LE mín. 260 MPa – média e alta pressão",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-M, E8018-D3 e E8018-C1; MIG/MAG ER70S-G, ER80S-Ni1 e ER80S-G (Ar + 1~5% O2); arame tubular E80T5-Ni1 e E80T5-N (CO2 ou Ar+CO2); arco submerso F7P6-EA3-A3, F7P6-ENi1-Ni1, F7P6-EG-G",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A537 CL1",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A537",
+   "rho": null,
+   "fy": 345,
+   "fu": 485,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,24 máx.",
+    "Mn": "0,70 - 1,35 (≤38,10) / 1,00 - 1,60 (>38,10)",
+    "Si": "0,15 - 0,50",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE / LR por espessura": "6,00-38,10 e 38,70-63,50: 345 / 485-620; 63,50-101,60: 310 / 450-585 (MPa)",
+    "Alongamento": "18 % (BM 200)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 260 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-7"
+  },
+  {
+   "nome": "ASTM A612",
+   "tipo": "aço para vasos de pressão",
+   "norma": "ASTM A612",
+   "rho": null,
+   "fy": 345,
+   "fu": 570,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 25,4 mm",
+    "C": "0,25 máx.",
+    "Mn": "1,00 - 1,50",
+    "Si": "0,15 - 0,50",
+    "P": "0,035 máx.",
+    "S": "0,025 máx.",
+    "LR": "570 - 725 (≤12,70) / 560 - 695 (12,70-25,4) MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 7"
+  },
+  {
+   "nome": "EN 10028-2 16Mo3",
+   "tipo": "aço liga Mo para vasos de pressão",
+   "norma": "EN 10028-2",
+   "rho": null,
+   "fy": 275,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,12 - 0,20",
+    "Mn": "0,40 - 0,90",
+    "Si": "0,35 máx.",
+    "P": "0,025 máx.",
+    "S": "0,010 máx.",
+    "LE / LR por espessura": "≤16: 275 / 440-590; 16-40: 270 / 440-590; 40-60: 260 / 440-590; 60-76,20: 240 / 430-580 (MPa)",
+    "Alongamento": "22 % (BM 5,65√So)",
+    "Classe caldeiras (pág. 6)": "similar da classe LE mín. 220 MPa",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Consumíveis de soldagem (AWS)": "Eletrodo E7018-A1, E70018-G; MIG/MAG ER70S-G e ER80S-D2 (CO2); arame tubular E70T5-A1, E71T1-G e E81T1-B1 (CO2 ou Ar+CO2); arco submerso F7x0-EA1-A1, F7x0-EG-G (coluna 'DIN 17155-15Mo3')",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão / aço estrutural.",
+   "fonte": "Tenax, pág. 6-8"
+  },
+  {
+   "nome": "ASTM A517",
+   "tipo": "aço temperado e revenido",
+   "norma": "ASTM A517",
+   "rho": null,
+   "fy": 690,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Classe caldeiras (pág. 6)": "grau típico da classe LE mín. 690 MPa – alta pressão com economia de peso; fornecido temperado e revenido",
+    "Similar": "USI-SAR-80T",
+    "Obs.": "Composição e demais propriedades não informadas; material sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão de alta pressão.",
+   "fonte": "Tenax, pág. 6"
+  },
+  {
+   "nome": "ASTM A621",
+   "tipo": "aço carbono",
+   "norma": "ASTM A621",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Classe caldeiras (pág. 6)": "citado como similar da classe LE mín. 260 MPa",
+    "Obs.": "Sem outros dados no catálogo; material sob consulta."
+   },
+   "uso": "Caldeiras e vasos de pressão (média e alta pressão).",
+   "fonte": "Tenax, pág. 6"
+  },
+  {
+   "nome": "USI CIVIL 300",
+   "tipo": "aço carbono estrutural",
+   "norma": "USI CIVIL",
+   "rho": null,
+   "fy": 300,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 75,00 mm",
+    "C": "0,25 máx.",
+    "Si": "1,50 máx.",
+    "Mn": "0,60 - 1,35",
+    "P": "0,060 máx.",
+    "S": "0,020 máx.",
+    "LR": "400 - 550 MPa",
+    "Alongamento": "18 % (BM 200)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9, 11"
+  },
+  {
+   "nome": "USI CIVIL 350",
+   "tipo": "aço carbono estrutural",
+   "norma": "USI CIVIL",
+   "rho": null,
+   "fy": 350,
+   "fu": 500,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 75,00 mm",
+    "C": "0,20 máx.",
+    "Si": "1,50 máx.",
+    "Mn": "0,60 - 1,60",
+    "P": "0,060 máx.",
+    "S": "0,020 máx.",
+    "LR": "500 - 650 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9, 11"
+  },
+  {
+   "nome": "ASTM A36",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A36",
+   "rho": null,
+   "fy": 250,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 150,00 mm",
+    "C": "0,25 máx. (≤38,10) / 0,26 máx. (38,11-63,50) / 0,27 máx. (63,51-101,60) / 0,29 máx. (101,61-150,00)",
+    "Si": "0,40 máx. (≤19,05) / 0,15 - 0,40 (>19,05)",
+    "Mn": "- (≤19,05) / 0,80 - 1,20 (19,06-63,50) / 0,85 - 1,20 (63,51-150,00)",
+    "P": "0,040 máx.",
+    "S": "0,050 máx.",
+    "LR": "400 - 550 MPa",
+    "Alongamento": "18 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A283 Gr. A",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A283",
+   "rho": null,
+   "fy": 165,
+   "fu": 310,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,14 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (38,11-101,60)",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "310 - 415 MPa",
+    "Alongamento": "25 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A283 Gr. B",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A283",
+   "rho": null,
+   "fy": 185,
+   "fu": 345,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,17 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (38,11-101,60)",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "345 - 450 MPa",
+    "Alongamento": "23 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A283 Gr. C",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A283",
+   "rho": null,
+   "fy": 205,
+   "fu": 380,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,24 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (38,11-101,60)",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "380 - 515 MPa",
+    "Alongamento": "20 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A283 Gr. D",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A283",
+   "rho": null,
+   "fy": 230,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,27 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (38,11-101,60)",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "415 - 550 MPa",
+    "Alongamento": "18 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A284-90 Gr. C",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A284",
+   "rho": null,
+   "fy": 205,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,24 máx. (≤25,4) / 0,27 máx. (25,5-50,8) / 0,29 máx. (50,9-101,60)",
+    "Si": "0,15 - 0,40",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "415 mín. MPa",
+    "Alongamento": "19 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A284-90 Gr. D",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A284",
+   "rho": null,
+   "fy": 230,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,24 máx. (≤25,4) / 0,27 máx. (25,5-50,8) / 0,29 máx. (50,9-101,60)",
+    "Si": "0,15 - 0,40",
+    "Mn": "0,90 máx.",
+    "P": "0,035 máx.",
+    "S": "0,040 máx.",
+    "LR": "415 mín. MPa",
+    "Alongamento": "19 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A514 Gr. B",
+   "tipo": "aço temperado e revenido",
+   "norma": "ASTM A514",
+   "rho": null,
+   "fy": 690,
+   "fu": 760,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 31,75 mm",
+    "C": "0,12 ~ 0,21",
+    "Si": "0,20 - 0,35",
+    "Mn": "0,70 - 1,00",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "760 - 895 MPa",
+    "Alongamento": "16 % (BM 50)",
+    "Dureza": "garantia para esp. ≤ 19,05 mm: 235-293 HRB (conforme impresso)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9, 11"
+  },
+  {
+   "nome": "ASTM A514 Gr. H",
+   "tipo": "aço temperado e revenido",
+   "norma": "ASTM A514",
+   "rho": null,
+   "fy": 690,
+   "fu": 760,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,12 ~ 0,21",
+    "Si": "0,20 - 0,35",
+    "Mn": "0,95 - 1,30",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LR": "760 - 895 MPa",
+    "Alongamento": "16 % (BM 50)",
+    "Dureza": "garantia para esp. ≤ 19,05 mm: 235-293 HRB (conforme impresso)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9, 11"
+  },
+  {
+   "nome": "ASTM A572 Gr. 42",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "ASTM A572",
+   "rho": null,
+   "fy": 290,
+   "fu": 415,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,21 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (>38,10)",
+    "Mn": "0,50 - 1,35 (≤9,52) / 0,80 - 1,35 (>9,52)",
+    "P": "0,040 máx.",
+    "S": "0,050 máx.",
+    "LR": "415 mín. MPa",
+    "Alongamento": "18 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A572 Gr. 50",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "ASTM A572",
+   "rho": null,
+   "fy": 345,
+   "fu": 450,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,23 máx.",
+    "Si": "0,40 máx. (≤38,10) / 0,15 - 0,40 (>38,10)",
+    "Mn": "0,50 - 1,35 (≤9,52) / 0,80 - 1,35 (>9,52)",
+    "P": "0,040 máx.",
+    "S": "0,050 máx.",
+    "LR": "450 mín. MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A572 Gr. 60",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "ASTM A572",
+   "rho": null,
+   "fy": 415,
+   "fu": 520,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 25,40 mm",
+    "C": "0,26 máx.",
+    "Si": "-",
+    "Mn": "0,50 - 1,35 (≤9,52) / 0,80 - 1,65 (>9,52)",
+    "P": "0,040 máx.",
+    "S": "0,050 máx.",
+    "LR": "520 mín. MPa",
+    "Alongamento": "13 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A573 Gr. 58",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A573",
+   "rho": null,
+   "fy": 220,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "C": "0,23 máx.",
+    "Si": "0,10 - 0,35",
+    "Mn": "0,60 - 0,90",
+    "P": "0,035 máx.",
+    "S": "0,04 máx.",
+    "LR": "400 - 490 MPa",
+    "Alongamento": "19 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A573 Gr. 65",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A573",
+   "rho": null,
+   "fy": 240,
+   "fu": 450,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "C": "0,24 máx. (≤12,70) / 0,26 máx. (12,71-38,10)",
+    "Si": "0,15 - 0,40",
+    "Mn": "0,85 - 1,20",
+    "P": "0,035 máx.",
+    "S": "0,04 máx.",
+    "LR": "450 - 530 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "ASTM A573 Gr. 70",
+   "tipo": "aço carbono estrutural",
+   "norma": "ASTM A573",
+   "rho": null,
+   "fy": 290,
+   "fu": 485,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "C": "0,27 máx. (≤12,70) / 0,28 máx. (12,71-38,10)",
+    "Si": "0,15 - 0,40",
+    "Mn": "0,85 - 1,20",
+    "P": "0,035 máx.",
+    "S": "0,04 máx.",
+    "LR": "485 - 620 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural: pontes, edifícios, galpões, torres eólicas, máquinas agrícolas e implementos rodoviários.",
+   "fonte": "Tenax, pág. 9"
+  },
+  {
+   "nome": "EN 10025-2 S235JR",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 235,
+   "fu": 360,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 150,00 mm",
+    "C": "0,17 máx. (≤40,00) / 0,20 máx. (>40,00)",
+    "Si": "-",
+    "Mn": "1,40 máx.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "≤16: 235; 16,01-40: 225; 40,01-100: 215; 100,01-150: 195 MPa",
+    "LR": "360 - 510 (≤100) / 350 - 500 (100,01-150) MPa",
+    "Alongamento": "22 % (BM 5,65√So)",
+    "Charpy": "20 °C, média 27 J",
+    "Ceq": "0,35 % (E ≤ 40) / 0,38 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S235J0",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 235,
+   "fu": 360,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 150,00 mm",
+    "C": "0,17 máx.",
+    "Si": "-",
+    "Mn": "1,40 máx.",
+    "P": "0,030 máx.",
+    "S": "0,030 máx.",
+    "LE por espessura": "≤16: 235; 16,01-40: 225; 40,01-100: 215; 100,01-150: 195 MPa",
+    "LR": "360 - 510 (≤100) / 350 - 500 (100,01-150) MPa",
+    "Alongamento": "22 % (BM 5,65√So)",
+    "Charpy": "0 °C, média 27 J",
+    "Ceq": "0,35 % (E ≤ 40) / 0,38 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S235J2",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 235,
+   "fu": 360,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 150,00 mm",
+    "C": "0,17 máx.",
+    "Si": "-",
+    "Mn": "1,40 máx.",
+    "P": "0,025 máx.",
+    "S": "0,025 máx.",
+    "LE por espessura": "≤16: 235; 16,01-40: 225; 40,01-100: 215; 100,01-150: 195 MPa",
+    "LR": "360 - 510 (≤100) / 350 - 500 (100,01-150) MPa",
+    "Alongamento": "22 % (BM 5,65√So)",
+    "Charpy": "-20 °C, média 27 J",
+    "Ceq": "0,35 % (E ≤ 40) / 0,38 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S275JR",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 275,
+   "fu": 410,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 100,00 mm",
+    "C": "0,21 máx. (≤40,00) / 0,22 máx. (>40,00)",
+    "Si": "-",
+    "Mn": "1,50 máx.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "≤16: 275; 16,01-40: 265; 40,01-63: 255; 63,01-80: 245; 80,01-100: 235 MPa",
+    "LR": "410 - 560 MPa",
+    "Alongamento": "20 % (BM 5,65√So)",
+    "Charpy": "20 °C, média 27 J",
+    "Ceq": "0,40 % (E ≤ 40) / 0,42 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S275J0",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 275,
+   "fu": 410,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,18 máx.",
+    "Si": "-",
+    "Mn": "1,50 máx.",
+    "P": "0,030 máx.",
+    "S": "0,030 máx.",
+    "LE por espessura": "≤16: 275; 16,01-40: 265; 40,01-63: 255; 63,01-76,20: 245 MPa",
+    "LR": "410 - 560 MPa",
+    "Alongamento": "20 % (BM 5,65√So)",
+    "Charpy": "0 °C, média 27 J",
+    "Ceq": "0,40 % (E ≤ 40) / 0,42 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S275J2",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 275,
+   "fu": 410,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,18 máx.",
+    "Si": "-",
+    "Mn": "1,50 máx.",
+    "P": "0,025 máx.",
+    "S": "0,025 máx.",
+    "LE por espessura": "≤16: 275; 16,01-40: 265; 40,01-63: 255; 63,01-76,20: 245 MPa",
+    "LR": "410 - 560 MPa",
+    "Alongamento": "20 % (BM 5,65√So)",
+    "Charpy": "-20 °C, média 27 J",
+    "Ceq": "0,40 % (E ≤ 40) / 0,42 % (E > 40)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S355JR",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,24 máx.",
+    "Si": "0,55 máx.",
+    "Mn": "1,60 máx.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "≤16: 355; 16,01-30: 345; 30,01-76,20: 335 MPa",
+    "LR": "490 - 610 MPa",
+    "Alongamento": "18 % (BM 5,65√So)",
+    "Charpy": "20 °C, média 27 J",
+    "Ceq": "0,45 % (E ≤ 30) / 0,47 % (E > 30)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S355J0",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 355,
+   "fu": 470,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,20 máx. (≤30,00) / 0,22 máx. (>30,00)",
+    "Si": "0,55 máx.",
+    "Mn": "1,60 máx.",
+    "P": "0,030 máx.",
+    "S": "0,030 máx.",
+    "LE por espessura": "≤16: 355; 16,01-30: 345; 30,01-76,20: 335 MPa",
+    "LR": "470 - 630 MPa",
+    "Alongamento": "18 % (BM 5,65√So)",
+    "Charpy": "0 °C, média 27 J",
+    "Ceq": "0,45 % (E ≤ 30) / 0,47 % (E > 30)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S355J2",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 355,
+   "fu": 470,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,20 máx. (≤30,00) / 0,22 máx. (>30,00)",
+    "Si": "0,55 máx.",
+    "Mn": "1,60 máx.",
+    "P": "0,025 máx.",
+    "S": "0,025 máx.",
+    "LE por espessura": "≤16: 355; 16,01-30: 345; 30,01-76,20: 335 MPa",
+    "LR": "470 - 630 MPa",
+    "Alongamento": "18 % (BM 5,65√So)",
+    "Charpy": "-20 °C, média 27 J",
+    "Ceq": "0,45 % (E ≤ 30) / 0,47 % (E > 30)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "EN 10025-2 S355K2",
+   "tipo": "aço carbono estrutural",
+   "norma": "EN 10025-2",
+   "rho": null,
+   "fy": 355,
+   "fu": 470,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,20 máx. (≤30,00) / 0,22 máx. (>30,00)",
+    "Si": "0,55 máx.",
+    "Mn": "1,60 máx.",
+    "P": "0,025 máx.",
+    "S": "0,025 máx.",
+    "LE por espessura": "≤16: 355; 16,01-30: 345; 30,01-76,20: 335 MPa",
+    "LR": "470 - 630 MPa",
+    "Alongamento": "18 % (BM 5,65√So)",
+    "Charpy": "-20 °C, média 40 J",
+    "Ceq": "0,45 % (E ≤ 30) / 0,47 % (E > 30)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 10-11"
+  },
+  {
+   "nome": "IRAM IAS 500-42 F-24",
+   "tipo": "aço carbono estrutural",
+   "norma": "IRAM IAS U 500-42",
+   "rho": null,
+   "fy": 235,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,21 (≤12,70) / 0,22 (12,71-25,00) / 0,24 (25,01-101,60) máx.",
+    "Si": "0,35 máx.",
+    "Mn": "-",
+    "P": "0,030 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "235 (E ≤ 16,00); 225 (16,00 < E ≤ 63,00); 215 (65,00 < E ≤ 100,00) MPa",
+    "LR": "400 - 550 MPa",
+    "Alongamento": "16 % (BM 200)",
+    "Dobramento": "exigência conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "IRAM IAS 500-42 F-26",
+   "tipo": "aço carbono estrutural",
+   "norma": "IRAM IAS U 500-42",
+   "rho": null,
+   "fy": 250,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 101,60 mm",
+    "C": "0,21 (≤12,70) / 0,22 (12,71-25,00) / 0,25 (25,01-101,60) máx.",
+    "Si": "0,35 máx.",
+    "Mn": "-",
+    "P": "0,030 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "250 (E ≤ 16,00); 245 (16,00 < E ≤ 63,00); 235 (65,00 < E ≤ 100,00) MPa",
+    "LR": "400 - 550 MPa",
+    "Alongamento": "15 % (BM 200)",
+    "Dobramento": "exigência conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "IRAM IAS 500-42 F-30",
+   "tipo": "aço carbono estrutural",
+   "norma": "IRAM IAS U 500-42",
+   "rho": null,
+   "fy": 295,
+   "fu": 450,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,21 (≤12,70) / 0,23 (12,71-25,00) / 0,25 (25,01-76,20) máx.",
+    "Si": "0,35 máx.",
+    "Mn": "-",
+    "P": "0,030 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "295 (E ≤ 16); 285 (16-40); 275 (40-63); 265 (63-75) MPa",
+    "LR": "450 - 600 MPa",
+    "Alongamento": "14 % (BM 200)",
+    "Dobramento": "exigência conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "IRAM IAS 500-42 F-36",
+   "tipo": "aço carbono estrutural",
+   "norma": "IRAM IAS U 500-42",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 76,20 mm",
+    "C": "0,22 (≤12,70) / 0,24 (12,71-25,00) / 0,25 (25,01-76,20) máx.",
+    "Si": "0,55 máx.",
+    "Mn": "-",
+    "P": "0,030 máx.",
+    "S": "0,035 máx.",
+    "LE por espessura": "355 (E ≤ 16); 345 (16-40); 335 (40-63); 325 (63-75) MPa",
+    "LR": "490 - 640 MPa",
+    "Alongamento": "14 % (BM 200)",
+    "Dobramento": "exigência conforme especificação",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "JIS G3101 SS-330",
+   "tipo": "aço carbono estrutural",
+   "norma": "JIS G 3101",
+   "rho": null,
+   "fy": 205,
+   "fu": 330,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 100,00 mm",
+    "C": "-",
+    "Si": "-",
+    "Mn": "-",
+    "P": "0,050 máx.",
+    "S": "0,050 máx.",
+    "LE por espessura": "≤16: 205; 16,01-40: 195; 40,01-100: 175 MPa",
+    "LR": "330 - 430 MPa",
+    "Alongamento": "21 % (BM 200)",
+    "Direção ensaio tração": "exceção à regra transversal (nota 7, pág. 11)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "JIS G3101 SS-400",
+   "tipo": "aço carbono estrutural",
+   "norma": "JIS G 3101",
+   "rho": null,
+   "fy": 245,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 100,00 mm",
+    "C": "-",
+    "Si": "-",
+    "Mn": "-",
+    "P": "0,050 máx.",
+    "S": "0,050 máx.",
+    "LE por espessura": "≤16: 245; 16,01-40: 235; 40,01-100: 215 MPa",
+    "LR": "400 - 510 MPa",
+    "Alongamento": "17 % (BM 200)",
+    "Direção ensaio tração": "exceção à regra transversal (nota 7, pág. 11)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "JIS G3101 SS-490",
+   "tipo": "aço carbono estrutural",
+   "norma": "JIS G 3101",
+   "rho": null,
+   "fy": 285,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 100,00 mm",
+    "C": "-",
+    "Si": "-",
+    "Mn": "-",
+    "P": "0,050 máx.",
+    "S": "0,050 máx.",
+    "LE por espessura": "≤16: 285; 16,01-40: 275; 40,01-100: 255 MPa",
+    "LR": "490 - 610 MPa",
+    "Alongamento": "15 % (BM 200)",
+    "Direção ensaio tração": "exceção à regra transversal (nota 7, pág. 11)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "JIS G3101 SS-540",
+   "tipo": "aço carbono estrutural",
+   "norma": "JIS G 3101",
+   "rho": null,
+   "fy": 400,
+   "fu": 540,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 100,00 mm",
+    "C": "0,30 máx.",
+    "Si": "-",
+    "Mn": "1,60 máx.",
+    "P": "0,040 máx.",
+    "S": "0,040 máx.",
+    "LE por espessura": "≤16: 400; 16,01-100: 390 MPa",
+    "LR": "540 mín. MPa",
+    "Alongamento": "17 % (BM 200)",
+    "Direção ensaio tração": "exceção à regra transversal (nota 7, pág. 11)",
+    "Dobramento": "ensaio de dobramento longitudinal conforme especificação",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural.",
+   "fonte": "Tenax, pág. 11"
+  },
+  {
+   "nome": "USI-SAR 50",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": 330,
+   "fu": 500,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 39,99 mm",
+    "C": "0,18 máx. (≤30,00) / 0,20 máx. (30,01-39,99)",
+    "Si": "0,55 máx.",
+    "Mn": "1,50 máx.",
+    "P": "0,030",
+    "S": "0,030",
+    "LR": "500 ~ 620 MPa",
+    "Alongamento": "mín. 20 % (BM 200)",
+    "Charpy": "0 °C, 40 J",
+    "Dobramento": "L, calço 3,0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Nota": "Acima de 39,99 mm fornecido normalizado; Nb + V máx. 0,12 %",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "USI-SAR 60",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": 460,
+   "fu": 600,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 25,00 mm",
+    "C": "0,18 máx.",
+    "Si": "0,55 máx.",
+    "Mn": "0,90 a 1,60",
+    "P": "0,030",
+    "S": "0,030",
+    "LR": "600 ~ 720 MPa",
+    "Alongamento": "mín. 19 % (BM 200)",
+    "Charpy": "0 °C, 40 J",
+    "Dobramento": "L, calço 3,0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "USI-SAR 60T",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": 460,
+   "fu": 600,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,16 máx.",
+    "Si": "0,55 máx.",
+    "Mn": "0,90 a 1,50",
+    "P": "0,030",
+    "S": "0,030",
+    "LR": "600 ~ 720 MPa",
+    "Alongamento": "mín. 19 % (BM 200)",
+    "Charpy": "-10 °C, 45 J",
+    "Dobramento": "L, calço 2,0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Nota": "Nb + V máx. 0,12 %; Cr máx. 0,35 %; B 0,0010 a 0,0030 %",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "USI-SAR 80T",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": 700,
+   "fu": 760,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,19 máx.",
+    "Si": "0,55 máx.",
+    "Mn": "0,60 a 1,20",
+    "P": "0,030",
+    "S": "0,030",
+    "LR": "760 ~ 950 MPa",
+    "Alongamento": "mín. 16 % (BM 200)",
+    "Charpy": "-10 °C, 27 J",
+    "Dobramento": "L, calço 2,0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "USI-SAR 100",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "USI-SAR 120",
+   "tipo": "aço de alta resistência baixa liga",
+   "norma": "USI-SAR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Aço estrutural soldável de alta resistência: pontes, viadutos, equipamentos de terraplenagem, guindastes, vagões, caminhões fora de estrada.",
+   "fonte": "Tenax, pág. 12"
+  },
+  {
+   "nome": "Naval grau A",
+   "tipo": "aço naval",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 235,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,21 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "2,5 × C mín.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "400 - 520 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval grau B",
+   "tipo": "aço naval",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 235,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,21 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "0,60 mín.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "400 - 520 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "0 °C, média 27 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval grau D",
+   "tipo": "aço naval",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 235,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,21 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "0,60 mín.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "400 - 520 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-20 °C, média 27 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval grau E",
+   "tipo": "aço naval",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 235,
+   "fu": 400,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "0,70 mín.",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "400 - 520 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-40 °C, média 27 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval AH-32",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,36 máx.",
+    "LR": "440 - 585 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "0 °C, média 31 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval DH-32",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,36 máx.",
+    "LR": "440 - 585 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-20 °C, média 31 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval EH-32",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 315,
+   "fu": 440,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,36 máx.",
+    "LR": "440 - 585 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-40 °C, média 31 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval AH-36",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,38 máx.",
+    "LR": "490 ~ 620 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "0 °C, média 34 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval DH-36",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,38 máx.",
+    "LR": "490 ~ 620 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-20 °C, média 34 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval EH-36",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 355,
+   "fu": 490,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,38 máx.",
+    "LR": "490 ~ 620 MPa",
+    "Alongamento": "BM 200; valor % não impresso",
+    "Charpy (longitudinal)": "-40 °C, média 34 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval A-40",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "510 ~ 660 MPa",
+    "Alongamento": "14 % (BM 200)",
+    "Charpy (longitudinal)": "0 °C, média 39 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval D-40",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "510 ~ 660 MPa",
+    "Alongamento": "14 % (BM 200)",
+    "Charpy (longitudinal)": "-20 °C, média 39 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "Naval E-40",
+   "tipo": "aço naval de alta resistência",
+   "norma": "ASTM / entidades classificadoras",
+   "rho": null,
+   "fy": 390,
+   "fu": 510,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,18 máx.",
+    "Si": "0,50 máx.",
+    "Mn": "0,70 ~ 1,60 (6,00-12,50) / 0,90 ~ 1,60 (12,51-50,80)",
+    "P": "0,035 máx.",
+    "S": "0,035 máx.",
+    "Outros elementos": "Nb, V, Ti conforme norma/homologação",
+    "Ceq": "0,40 máx.",
+    "LR": "510 ~ 660 MPa",
+    "Alongamento": "14 % (BM 200)",
+    "Charpy (longitudinal)": "-40 °C, média 39 J",
+    "Direção ensaio tração": "transversal",
+    "Obs.": "Atendimento até o grau 40 para ASTM, BV e DNV; demais entidades até o grau 36. DNV: considerar Mn ≥ 0,80 % (6,00 ≤ E ≤ 25,00), LR 440~570 (AH32/DH32/EH32) e 470~620 MPa (AH36/DH36/EH36); BV, LR, KR e GL: LR 440~570 (grau 32) e 490~630 MPa (grau 36); ABS e NK: LR 440~590 MPa (grau 32). Material sob consulta."
+   },
+   "uso": "Construção naval e petróleo: componentes estruturais, cascos de navios e plataformas flutuantes (FPSO), regidos por ASTM ou entidades classificadoras internacionais.",
+   "fonte": "Tenax, pág. 13"
+  },
+  {
+   "nome": "USI LN 380",
+   "tipo": "aço para longarinas",
+   "norma": "USI LN",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 15,00 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "USI LN 500",
+   "tipo": "aço para longarinas",
+   "norma": "USI LN",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 15,00 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "USI LN 600",
+   "tipo": "aço para longarinas",
+   "norma": "USI LN",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 15,00 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "USI LN 900 L",
+   "tipo": "aço para longarinas",
+   "norma": "USI LN",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 15,00 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "NBR 6656 LNE 200",
+   "tipo": "aço para longarinas",
+   "norma": "NBR 6656",
+   "rho": null,
+   "fy": 200,
+   "fu": 280,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 16,00 mm",
+    "C": "0,12 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "0,60 máx.",
+    "P": "0,25 máx. (conforme impresso; provável 0,025)",
+    "S": "0,025 máx.",
+    "LE": "200 ~ 330 MPa",
+    "LR": "280 ~ 410 MPa",
+    "Alongamento": "35 % (BM 5,65√So)",
+    "Dobramento": "T, calço 0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "NBR 6656 LNE 230",
+   "tipo": "aço para longarinas",
+   "norma": "NBR 6656",
+   "rho": null,
+   "fy": 230,
+   "fu": 330,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 16,00 mm",
+    "C": "0,12 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "0,80 máx.",
+    "P": "0,25 máx. (conforme impresso; provável 0,025)",
+    "S": "0,025 máx.",
+    "LE": "230 ~ 360 MPa",
+    "LR": "330 ~ 460 MPa",
+    "Alongamento": "30 % (BM 5,65√So)",
+    "Dobramento": "T, calço 0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "NBR 6656 LNE 260",
+   "tipo": "aço para longarinas",
+   "norma": "NBR 6656",
+   "rho": null,
+   "fy": 260,
+   "fu": 370,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 16,00 mm",
+    "C": "0,15 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "1,00 máx.",
+    "P": "0,25 máx. (conforme impresso; provável 0,025)",
+    "S": "0,025 máx.",
+    "LE": "260 ~ 390 MPa",
+    "LR": "370 ~ 500 MPa",
+    "Alongamento": "30 % (BM 5,65√So)",
+    "Dobramento": "T, calço 0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "NBR 6656 LNE 380",
+   "tipo": "aço para longarinas",
+   "norma": "NBR 6656",
+   "rho": null,
+   "fy": 380,
+   "fu": 460,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "não informada (célula vazia)",
+    "C": "0,12 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "1,10 máx.",
+    "P": "0,25 máx. (conforme impresso; provável 0,025)",
+    "S": "0,015 máx.",
+    "LE": "380 ~ 530 MPa",
+    "LR": "460 ~ 600 MPa",
+    "Alongamento": "23 % (BM 5,65√So)",
+    "Dobramento": "T, calço 0E",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "NBR 6656 LNE 500",
+   "tipo": "aço para longarinas",
+   "norma": "NBR 6656",
+   "rho": null,
+   "fy": 500,
+   "fu": 560,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 15,00 mm",
+    "C": "0,12 máx.",
+    "Si": "0,35 máx.",
+    "Mn": "1,50 máx.",
+    "P": "0,25 máx. (conforme impresso; provável 0,025)",
+    "S": "0,015 máx.",
+    "LE": "500 ~ 620 MPa",
+    "LR": "560 ~ 630 MPa",
+    "Alongamento": "23 % (BM 5,65√So)",
+    "Dobramento": "T, calço 0,5E (6,00-10,00) / 1,5E (10,01-15,00)",
+    "Direção ensaio tração": "transversal",
+    "Outros elementos": "conforme norma",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Longarinas, travessas, chassis e eixos de máquinas agrícolas, tratores e implementos rodoviários.",
+   "fonte": "Tenax, pág. 14"
+  },
+  {
+   "nome": "USI AR 400",
+   "tipo": "aço resistente à abrasão",
+   "norma": "USI AR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,22 máx.",
+    "Mn": "1,50 máx.",
+    "P": "0,030 máx.",
+    "S": "0,015 máx.",
+    "Ni": "-",
+    "Cr": "0,80 máx.",
+    "Mo": "0,40 máx.",
+    "Outros elementos": "B, Nb e Ti conforme norma USI AR",
+    "Dureza": "360 - 440 (unidade não indicada no catálogo)",
+    "Tratamento térmico": "Têmpera",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Resistente ao desgaste: caçambas de caminhões fora de estrada, tremonhas, revestimentos de calhas, transportadores de minérios, peças de altos-fornos e ventiladores industriais.",
+   "fonte": "Tenax, pág. 15"
+  },
+  {
+   "nome": "USI AR 400 L",
+   "tipo": "aço resistente à abrasão",
+   "norma": "USI AR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,19 máx.",
+    "Mn": "1,40 máx.",
+    "P": "0,025 máx.",
+    "S": "0,010 máx.",
+    "Ni": "0,05 máx.",
+    "Cr": "0,40 máx.",
+    "Mo": "-",
+    "Outros elementos": "B, Nb e Ti conforme norma USI AR",
+    "Dureza": "360 - 440 (unidade não indicada no catálogo)",
+    "Tratamento térmico": "Alívio de tensão + Têmpera",
+    "Ceq": "0,38 % (E ≤ 19,05) / 0,50 % (E > 19,05) – típicos",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Resistente ao desgaste: caçambas de caminhões fora de estrada, tremonhas, revestimentos de calhas, transportadores de minérios, peças de altos-fornos e ventiladores industriais.",
+   "fonte": "Tenax, pág. 15"
+  },
+  {
+   "nome": "USI AR 450 L",
+   "tipo": "aço resistente à abrasão",
+   "norma": "USI AR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,25 máx.",
+    "Mn": "1,50 máx.",
+    "P": "0,025 máx.",
+    "S": "0,010 máx.",
+    "Ni": "0,20 máx.",
+    "Cr": "0,40 máx.",
+    "Mo": "-",
+    "Outros elementos": "B, Nb e Ti conforme norma USI AR",
+    "Dureza": "410 - 490 (unidade não indicada no catálogo)",
+    "Tratamento térmico": "Alívio de tensão + Têmpera",
+    "Ceq": "0,46 % (E ≤ 19,05) / 0,54 % (E > 19,05) – típicos",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Resistente ao desgaste: caçambas de caminhões fora de estrada, tremonhas, revestimentos de calhas, transportadores de minérios, peças de altos-fornos e ventiladores industriais.",
+   "fonte": "Tenax, pág. 15"
+  },
+  {
+   "nome": "USI AR 500 L",
+   "tipo": "aço resistente à abrasão",
+   "norma": "USI AR",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 50,80 mm",
+    "C": "0,29 máx.",
+    "Mn": "1,20 máx.",
+    "P": "0,025 máx.",
+    "S": "0,010 máx.",
+    "Ni": "0,70 máx.",
+    "Cr": "0,70 máx.",
+    "Mo": "0,40 máx.",
+    "Outros elementos": "B, Nb e Ti conforme norma USI AR",
+    "Dureza": "450 - 550 (unidade não indicada no catálogo)",
+    "Tratamento térmico": "Alívio de tensão + Têmpera",
+    "Ceq": "0,63 % – típico",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Resistente ao desgaste: caçambas de caminhões fora de estrada, tremonhas, revestimentos de calhas, transportadores de minérios, peças de altos-fornos e ventiladores industriais.",
+   "fonte": "Tenax, pág. 15"
+  },
+  {
+   "nome": "API 5L A",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L B",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X42M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X46M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X52M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X56M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X60M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X65M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X70M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 38,10 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  },
+  {
+   "nome": "API 5L X80M",
+   "tipo": "aço para tubos",
+   "norma": "API 5L",
+   "rho": null,
+   "fy": null,
+   "fu": null,
+   "E": null,
+   "outros": {
+    "Faixa de espessura": "6,00 ≤ E ≤ 19,05 mm",
+    "Composição e propriedades": "sob consulta",
+    "Obs.": "Norma citada para referência; material disponível sob consulta."
+   },
+   "uso": "Tubos de grande diâmetro (conformação UOE ou calandra, soldados por arco submerso) para transporte de óleo, gás, minérios e derivados.",
+   "fonte": "Tenax, pág. 16"
+  }
+ ]
+}

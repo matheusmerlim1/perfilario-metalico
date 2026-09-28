@@ -16,3 +16,6 @@ Thumbs.db
 
 # Guias locais
 githubGuia.md
+
+# Páginas baixadas pelos scripts de importação
+.cache/
