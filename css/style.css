@@ -251,5 +251,8 @@ tbody tr.grp small{font:400 12px var(--f-body);letter-spacing:0;text-transform:n
   .tblock div:nth-child(n+4){border-top:1px solid var(--line)}
   #q{width:100%}
   .filters .fld:first-child{flex:1 1 100%}
+  /* o select tinha a largura da opção mais longa e empurrava o "valor" para fora da tela */
+  .filters .fld{flex:1 1 100%;min-width:0}
+  .req select{flex:1 1 auto;min-width:0}
 }
 @media (prefers-reduced-motion:no-preference){.fbtn,.tg{transition:background-color .12s,border-color .12s}}
