@@ -7,6 +7,7 @@ Catálogo interativo de perfis metálicos estruturais e de produtos de catálogo
 ## O que tem
 
 - **Perfis de aço:** W e HP, I, U, T, cantoneiras, tubos quadrados, retangulares e redondos, U enrijecido, U simples, barras chatas e redondas.
+- **Perfis americanos (AISC Shapes Database v15.0, 2 091 bitolas):** W, HP, S, M, C, MC, cantoneiras L (abas iguais e desiguais), cantoneiras duplas 2L, WT, MT, ST, tubos HSS retangulares e redondos e Pipe, com designação métrica e americana (W 100 × 19,3 = W 4 × 13).
 - **Catálogos de fabricantes** (416 famílias, 4 976 itens, 266 materiais):
   - chapas de aço (Tenax);
   - perfis, grades, escadas e eletrocalhas em fibra de vidro (Gran e Stratus);
@@ -19,7 +20,7 @@ Catálogo interativo de perfis metálicos estruturais e de produtos de catálogo
 - **Navegação em três níveis:** categoria (Perfis de aço, Chapas, Grades e escadas, Içamento, Fixação…) → tipo de produto (Manilhas, Ganchos, Olhais…, cada um com seu desenho) → família, separada por fabricante. Tipos com muitas famílias viram uma lista compacta em colunas.
 - **Tabela enxuta:** a lista mostra só o nome e a massa (kg/m, kg/m², kg/peça, conforme o catálogo). Todas as dimensões e as demais propriedades ficam no painel da direita. "Ordenar por" e "Requisito mínimo" trazem mais uma coluna à tabela quando usados.
 - **Desenho cotado da seção:** cotas com sigla e valor, configuráveis (quais aparecem, afastamento, valores editáveis nas famílias calculadas). Os perfis de fibra de vidro com d, bf, tw, tf também são desenhados.
-- **Filtros:** busca, requisito mínimo com destaque do item mais leve que atende, ordenação por qualquer propriedade.
+- **Filtros:** busca por nome ("w100x19", "W4x13") ou por qualquer medida ("100" lista toda bitola com alguma medida 100, mostrando qual; atalhos para as outras famílias que também têm a busca), requisito mínimo com destaque do item mais leve que atende, ordenação por qualquer propriedade.
 - **Massa:** massa total por comprimento, área ou quantidade, conforme a unidade da família.
 - **Materiais:** constantes do aço (NBR 8800), graus de aço por família, densidade de outros metais e todos os materiais citados nos catálogos de fabricantes, com busca e filtro por fonte.
 
@@ -37,6 +38,7 @@ js/fabricantes.js       transforma os catálogos de fabricantes em famílias da 
 js/app.js               estado, renderização e eventos
 js/portfolio-btn.js     posicionamento do botão de portfólio
 js/dados/perfis-gerdau.js   tabela Gerdau (W, HP, I, U, T, cantoneiras)
+js/dados/perfis-aisc.js     perfis AISC (gerado por tools/importar-aisc.py a partir do AISC Shapes Database v15.0)
 js/dados/fab-*.js       catálogos de fabricantes (gerados, não edite à mão)
 dados/*.json            catálogos de fabricantes transcritos (fonte dos fab-*.js)
 tools/gerar-dados.py    gera js/dados/fab-*.js e a lista de <script> do index.html

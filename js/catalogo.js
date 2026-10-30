@@ -138,5 +138,44 @@ const FAM = [
     dims:[['D','D (mm)']]},
   {id:'mat', group:'Referência', label:'Materiais', title:'Materiais', rho:true}
 ];
+
+/* ---------- perfis americanos: AISC Shapes Database v15.0 (js/dados/perfis-aisc.js) ---------- */
+const AISC_DIM = {
+  I: p => ({d:p.d, bf:p.bf, tw:p.tw, tf:p.tf}), U: p => ({d:p.d, bf:p.bf, tw:p.tw, tf:p.tf}), TW: p => ({d:p.d, bf:p.bf, tw:p.tw, tf:p.tf}),
+  LU: p => ({b:p.b, bs:p.bs, t:p.t}), '2L': p => ({d:p.d, b:p.b, t:p.t, s:p.s}), RHS: p => ({B:p.B, H:p.H, t:p.t}), CHS: p => ({D:p.D, t:p.t})
+};
+const AISC_COLS = {
+  I:['m','d','bf','tw','tf','A','Ix','Wx','Zx','Iy','Wy','ry','eff'], U:['m','d','bf','tw','tf','A','Ix','Wx','rx','Iy','Wy','ry','x'],
+  TW:['m','d','bf','tw','tf','y','A','Ix','Wx','rx','Iy','Wy','ry'], LU:['m','b','bs','t','A','Ix','Wx','rx','Iy','Wy','ry','rz','x','y'],
+  '2L':['m','d','b','t','s','A','Ix','Wx','rx','Iy','Wy','ry','y'], RHS:['m','H','B','t','A','Ix','Wx','rx','Iy','Wy','ry','eff','u'],
+  CHS:['m','D','t','A','Ix','Wx','rx','eff','u']
+};
+const AISC_ICON = {I:{d:100,bf:72,tw:7,tf:10}, U:{d:100,bf:44,tw:8,tf:11}, TW:{d:84,bf:84,tw:9,tf:12}, LU:{b:84,bs:56,t:12},
+  '2L':{d:80,b:44,t:10,s:6}, RHS:{B:60,H:84,t:9}, CHS:{D:84,t:9}};
+const AISC_DIG = {m:1, d:0, bf:0, tw:2, tf:2, b:1, bs:1, t:1, D:1, Di:1, B:1, H:1, A:1, Ix:0, Iy:0};
+[ /* id, chave em AISC, forma, rótulo, título, descrição, bitola padrão */
+  ['aw','W','I','W','Perfis W (padrão americano)','Abas paralelas, série completa do AISC em designação métrica (altura nominal em mm × massa em kg/m) e americana (in × lb/ft): W 100 × 19,3 = W 4 × 13.','W 100 × 19,3'],
+  ['ahp','HP','I','HP','Perfis HP (padrão americano)','Estacas e pilares pesados, alma e mesa de mesma espessura.'],
+  ['as','S','I','S','Perfis S (I padrão americano)','I de abas inclinadas, série AISC.'],
+  ['am','M','I','M','Perfis M (I leve)','Perfis I leves, que não entram nas séries W, S ou HP.'],
+  ['ac','C','U','C','Perfis C (U padrão americano)','Canal de abas inclinadas, série AISC. x e eo medidos da face de trás da alma.'],
+  ['amc','MC','U','MC','Perfis MC (U diversos)','Canais que não entram na série C, em geral mais pesados.'],
+  ['al','L','LU','L','Cantoneiras L (abas iguais e desiguais)','Série AISC: b = aba maior, b₂ = aba menor. x e y medidos das faces externas ao centroide.'],
+  ['a2l','2L','2L','2L','Cantoneiras duplas 2L','Duas cantoneiras costas com costas (LLBB: abas maiores encostadas; SLBB: menores). O número antes do sufixo, quando há, é o afastamento s em mm; Iy, Wy e ry dependem dele.'],
+  ['awt','WT','TW','WT','Perfis WT (T cortado de W)','Metade de um perfil W. y medido da face externa da mesa ao centroide.'],
+  ['amt','MT','TW','MT','Perfis MT (T cortado de M)','Metade de um perfil M.'],
+  ['ast','ST','TW','ST','Perfis ST (T cortado de S)','Metade de um perfil S.'],
+  ['ahr','HSSR','RHS','HSS retangular','Tubos HSS retangulares e quadrados','Tubos estruturais em designação métrica: altura × largura × parede. Propriedades calculadas com a espessura de projeto (t proj.).'],
+  ['ahc','HSSC','CHS','HSS redondo','Tubos HSS redondos','Tubos estruturais circulares: Ø externo × parede. Propriedades com a espessura de projeto (t proj.).'],
+  ['ap','PIPE','CHS','Pipe','Tubos Pipe (STD, XS, XXS)','Tubos de condução usados como estrutura: diâmetro nominal em mm e espessura STD, XS ou XXS.'],
+].forEach(([id, k, shape, label, title, desc, def]) => {
+  rows[id] = AISC[k].map((r, i) => {
+    const {n, us, ...p} = r;
+    if (p.Wx && p.m) p.eff = p.Wx / p.m;
+    return {id:id+i, name:n, sub:us, shape, dim:AISC_DIM[shape](p), common:false, p};
+  });
+  FAM.splice(FAM.findIndex(f => f.rho), 0, {id, group:'Perfis americanos (AISC)', label, title, icon:[shape, AISC_ICON[shape]], desc,
+    cols:AISC_COLS[shape], dig:AISC_DIG, len:shape === 'RHS' || shape === 'CHS' ? 6 : 12, src:'AISC Shapes Database v15.0', def});
+});
 const famById = Object.fromEntries(FAM.map(f => [f.id, f]));
 const MATS = [['Aço carbono',7850],['Aço inox 304',7930],['Aço inox 316',7980],['Alumínio 6063',2700],['Latão',8500],['Cobre',8960]];

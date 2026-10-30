@@ -38,11 +38,21 @@ function tcols(f) {
 }
 const hasMass = f => !f.gen || !!f.props.m;
 
+/* busca de bitola: pelo nome (sem espaços, x = ×, ponto = vírgula: "w100x19" acha "W 100 × 19,3")
+   ou por medida: "100" acha toda bitola com alguma medida ou propriedade 100 (ou 100,x); "19,3" só a exata */
+const normQ = s => String(s).toLowerCase().replace(/\s+/g,'').replace(/x/g,'×').replace(/\./g,',');
+function qMatch(q) {
+  const t = normQ(q); if (!t) return null;
+  const n = /^\d+(,\d+)?$/.test(t) ? parseFloat(t.replace(',', '.')) : null, dec = t.includes(',');
+  const hits = r => n == null ? [] : Object.keys(r.p).filter(k => { const v = r.p[k];
+    return k !== 'eff' && typeof v === 'number' && (Math.abs(v - n) < 1e-9 || (!dec && Math.trunc(v) === n)); });
+  const nome = r => r._q ??= normQ(r.name + '|' + (r.sub || ''));
+  return {ok: r => nome(r).includes(t) || hits(r).length > 0, hits};
+}
 function visible() {
   const f = fam(); let list = rows[f.id];
-  const norm = s => s.toLowerCase().replace(/\s+/g,'').replace(/x/g,'×').replace(/\./g,',');
-  const q = norm(S.q);
-  if (q) list = list.filter(r => norm(r.name + '|' + r.sub).includes(q));
+  const qm = qMatch(S.q);
+  if (qm) list = list.filter(qm.ok);
   if (S.common) list = list.filter(r => r.common);
   for (const [id,,fn] of (f.toggles || [])) if (S.tg.has(id)) list = list.filter(fn);
   const rv = parseFloat(String(S.req.v).replace(',','.'));
@@ -127,8 +137,11 @@ function renderHead() {
   const s = $('sortk'); if (s) s.value = S.sort ? S.sort.k : '';
 }
 function renderTable() {
-  const f = fam(), list = visible(), cols = tcols(f);
+  const f = fam(), list = visible(), cols = tcols(f), qm = qMatch(S.q);
   renderHead();
+  /* busca por medida: qual propriedade bateu, embaixo do nome */
+  const qhit = r => { const ks = qm ? qm.hits(r) : []; return ks.length ? `<small class="qhit">${ks.slice(0, 4).map(k =>
+    `${esc(PR(f,k)[0])} = ${fv(r.p[k], dg(f,k))}${PR(f,k)[1] ? ' ' + esc(PR(f,k)[1]) : ''}`).join(' · ')}</small>` : ''; };
   let best = null;
   const rv = parseFloat(String(S.req.v).replace(',','.'));
   const reqOn = S.req.k && isFinite(rv);
@@ -140,7 +153,7 @@ function renderTable() {
   const grp = (t, n) => `<tr class="grp"><td colspan="${cols.length+1}">${t} <small>${n} ${noun(f, n)}</small></td></tr>`;
   const rowsHtml = l => l.map(r => `<tr data-id="${r.id}" tabindex="0"${r.id===S.sel[f.id]?' class="sel" aria-selected="true"':''}>
     <td><span class="nm"><span class="dot${r.common?'':' off'}" ${r.common?'title="Uso frequente"':''}></span><span class="nt">${esc(r.name)}${
-      r.sub && f.gen ? `<small>${esc(r.sub)}</small>` : ''}</span>${
+      r.sub && f.gen ? `<small>${esc(r.sub)}</small>` : ''}${qhit(r)}</span>${
       r.H?'<span class="tag h">H</span>':''}${r.enc?'<span class="tag enc" title="Sob encomenda">enc.</span>':''}${
       best&&r.id===best.id?'<span class="tag lt">mais leve</span>':''}</span></td>
     ${cols.map(k => `<td${k===hk?' class="hl"':''}>${fv(val(r,k), dg(f,k))}</td>`).join('')}</tr>`).join('');
@@ -148,6 +161,16 @@ function renderTable() {
     ? `<tr><td colspan="${cols.length+1}" class="empty">Nenhum${f.gen ? ' item' : 'a bitola'} atende aos filtros. Reduza o requisito ou desmarque um filtro.</td></tr>`
     : grouped ? grp('<span class="dot"></span>Mais usuais', usual.length) + rowsHtml(usual) + grp('Demais bitolas', rest.length) + rowsHtml(rest)
     : rowsHtml(list);
+  /* a mesma busca nas outras famílias: atalhos que trocam de família mantendo a busca */
+  const qa = $('qall');
+  const outras = qm ? FAM.filter(x => x.id !== f.id && rows[x.id]).map(x => [x, rows[x.id].filter(qm.ok).length]).filter(([, n]) => n) : [];
+  /* da mesma categoria primeiro; as de outras categorias ficam recolhidas num botão */
+  const mesma = outras.filter(([x]) => x.group === f.group), resto = outras.filter(([x]) => x.group !== f.group);
+  const chip = ([x, n]) => `<button type="button" data-qf="${x.id}" title="${esc([x.group, x.tipo, x.maker, x.title].filter(Boolean).join(' › '))}">${esc(x.label)}<small>${n}</small></button>`;
+  qa.hidden = !outras.length;
+  qa.innerHTML = outras.length ? `<span>“${esc(S.q)}” também em:</span>` + mesma.map(chip).join('') +
+    (resto.length ? (S.qAll ? resto.map(chip).join('') + '<button type="button" data-qall="0">menos</button>'
+      : `<button type="button" data-qall="1">+ ${resto.length} famílias em outras categorias</button>`) : '') : '';
   const b = $('best'), rk = S.req.k && PR(f, S.req.k);
   if (reqOn) {
     b.hidden = false;
@@ -357,9 +380,9 @@ function renderMatFab() {
 }
 
 /* ---------- eventos ---------- */
-function setFam(id) {
+function setFam(id, keepQ) {
   if (!famById[id]) return;
-  S.fam = id; S.q = ''; S.tg = new Set(); S.req = {k:'',v:''}; S.sort = null; S.custom = null;
+  S.fam = id; S.q = keepQ ? S.q : ''; S.tg = new Set(); S.req = {k:'',v:''}; S.sort = null; S.custom = null;
   store.set('perfilario-fam', id);
   try { history.replaceState(null, '', '#' + id); } catch (e) {}
   renderFamily();
@@ -415,6 +438,10 @@ $('tbl').addEventListener('keydown', e => {
   const tr = e.target.closest('tr[data-id]'); if (!tr) return;
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(tr.dataset.id, true); }
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); let n = tr; do { n = e.key === 'ArrowDown' ? n.nextElementSibling : n.previousElementSibling; } while (n && !n.dataset.id); if (n) { n.focus(); select(n.dataset.id, false); } }
+});
+$('qall').addEventListener('click', e => {
+  const t = e.target.closest('button[data-qall]'); if (t) { S.qAll = t.dataset.qall === '1'; return renderTable(); }
+  const b = e.target.closest('button[data-qf]'); if (b) setFam(b.dataset.qf, true);
 });
 $('best').addEventListener('click', e => { const b = e.target.closest('button[data-id]'); if (b) { select(b.dataset.id, true); const tr = document.querySelector(`#tbl tr[data-id="${b.dataset.id}"]`); if (tr) tr.scrollIntoView({block:'nearest'}); } });
 $('detail').addEventListener('input', e => {

@@ -30,6 +30,29 @@ function cotaSpec(sh, g, p) {
       add('t', 'HI', {v:t, y:b*0.35, x1:0, x2:t});
       break;
     }
+    case 'TW': {
+      const {d, bf, tw, tf} = g;
+      add('d', 'V', {v:d, x:-bf/2, y1:0, y2:d, side:'L'});
+      add('bf', 'H', {v:bf, y:0, x1:-bf/2, x2:bf/2, side:'T'});
+      add('tf', 'V', {v:tf, x:bf/2, y1:0, y2:tf, side:'R'});
+      add('tw', 'HI', {v:tw, y:d*0.74, x1:-tw/2, x2:tw/2});
+      break;
+    }
+    case 'LU': {
+      const {b, bs, t} = g;
+      add('b', 'V', {v:b, x:0, y1:0, y2:b, side:'L'}, 'b', 'Largura da aba maior');
+      add('bs', 'H', {v:bs, y:b, x1:0, x2:bs, side:'B'});
+      add('t', 'HI', {v:t, y:b*0.35, x1:0, x2:t});
+      break;
+    }
+    case '2L': {
+      const {d, b, t, s} = g, a = s/2;
+      add('d', 'V', {v:d, x:-a-b, y1:0, y2:d, side:'L'}, 'd', 'Altura da aba encostada');
+      add('b', 'H', {v:b, y:d, x1:a, x2:a+b, side:'B'}, 'b', 'Largura da aba de cada cantoneira');
+      add('t', 'HI', {v:t, y:d*0.35, x1:a, x2:a+t});
+      add('s', 'HI', {v:s, y:d*0.15, x1:-a, x2:a});
+      break;
+    }
     case 'Ue': case 'Us': {
       const {H, B, t} = g;
       add('H', 'V', {v:H, x:0, y1:0, y2:H, side:'L'}, 'H', 'Altura');
@@ -70,7 +93,7 @@ function pathOf(o, s, tx, ty) {
 }
 function bbox(o) {
   if (o.circles) { const R = o.circles[0]; return [-R,-R,R,R]; }
-  const p = o.rings[0]; const xs = p.map(q => q[0]), ys = p.map(q => q[1]);
+  const p = o.rings.flat(); const xs = p.map(q => q[0]), ys = p.map(q => q[1]);
   return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
 }
 function icon(shape, g) {

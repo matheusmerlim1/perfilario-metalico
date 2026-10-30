@@ -37,6 +37,7 @@
       <div>
         <div class="filters" id="filters"></div>
         <div class="best" id="best" hidden></div>
+        <div class="qall" id="qall" hidden></div>
         <div class="twrap" id="twrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
         <div class="count" id="count"></div>
       </div>
@@ -47,7 +48,7 @@
   <section id="materials" class="mat" hidden></section>
 
   <footer class="foot">
-    <div><strong>Fontes.</strong> Perfis W, HP, I, U, T e cantoneiras: <em>Tabela de bitolas Gerdau</em> (valores transcritos do catálogo). Tubos, perfis formados a frio e barras: propriedades calculadas pela geometria da seção, aço com ρ = 7 850 kg/m³.</div>
+    <div><strong>Fontes.</strong> Perfis W, HP, I, U, T e cantoneiras: <em>Tabela de bitolas Gerdau</em> (valores transcritos do catálogo). Perfis americanos W, HP, S, M, C, MC, L, 2L, WT, MT, ST, HSS e Pipe: <em>AISC Shapes Database v15.0</em> (colunas métricas, convertidas para cm). Tubos, perfis formados a frio e barras: propriedades calculadas pela geometria da seção, aço com ρ = 7 850 kg/m³.</div>
     <div>Perfis formados a frio calculados com cantos vivos e tubos retangulares com raio externo 2t; a diferença para os catálogos de fabricante costuma ficar entre 1 % e 3 %. Confirme bitolas e disponibilidade com o fornecedor antes de especificar.</div>
     <div id="fontes-fab"></div>
     <div>“Uso frequente” indica bitolas de uso corrente no mercado brasileiro. É uma orientação, não um dado de catálogo.</div>
@@ -55,6 +56,7 @@
 </div>
 
 <script src="js/dados/perfis-gerdau.js"></script>
+<script src="js/dados/perfis-aisc.js"></script>
 <!-- catálogos de fabricantes (gerado) -->
 <script>window.CATALOGOS = [];</script>
 <script src="js/dados/fab-tenax.js"></script>

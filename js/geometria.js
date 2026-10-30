@@ -10,14 +10,21 @@ const P = {
   I:['Ix = Iy','cm⁴',2,'Momento de inércia'], W:['Wx = Wy','cm³',2,'Módulo elástico'], r:['rx = ry','cm',2,'Raio de giração'],
   rz:['rz','cm',2,'Raio de giração mínimo'], x:['x','cm',2,'Centroide (face externa)'], rt:['rt','cm',2,'Raio de giração da mesa'],
   It:['It','cm⁴',2,'Constante de torção'], Cw:['Cw','cm⁶',0,'Constante de empenamento'], lf:['bf/2tf','',2,'Esbeltez da mesa'],
-  lw:["d'/tw",'',2,'Esbeltez da alma'], u:['u','m²/m',2,'Área de pintura'], eff:['Wx/m','cm³ por kg/m',2,'Eficiência à flexão']
+  lw:["d'/tw",'',2,'Esbeltez da alma'], u:['u','m²/m',2,'Área de pintura'], eff:['Wx/m','cm³ por kg/m',2,'Eficiência à flexão'],
+  /* perfis AISC */
+  k:['k','mm',1,'Face da mesa ao fim da concordância'], k1:['k1','mm',1,'Eixo da alma ao fim da concordância'],
+  T:['T','mm',1,'Trecho reto da alma'], bs:['b₂','mm',1,'Largura da aba menor'], s:['s','mm',0,'Afastamento entre as cantoneiras'],
+  Di:['Di','mm',1,'Diâmetro interno'], tdes:['t proj.','mm',2,'Espessura de projeto'], g:['g','mm',0,'Gabarito de furação na mesa'],
+  y:['y','cm',2,'Centroide (outra face)'], eo:['eo','cm',2,'Centro de cisalhamento (face da alma)'],
+  Iz:['Iz','cm⁴',1,'Momento de inércia mínimo'], ta:['tan α','',3,'Inclinação do eixo z'], hw:['h/tw','',2,'Esbeltez da alma'],
+  Ct:['C','cm³',1,'Constante de torção (tubo)'], ro:['r0','cm',2,'Raio de giração polar']
 };
 const GROUPS = [
-  ['Dimensões', ['d','bf','tw','tf','h','dl','H','B','c','b','t','D']],
-  ['Seção', ['m','A','u','x']],
+  ['Dimensões', ['d','bf','tw','tf','h','dl','k','k1','T','H','B','c','b','bs','t','tdes','s','D','Di','g']],
+  ['Seção', ['m','A','u','x','y','eo']],
   ['Eixo x', ['Ix','Wx','Zx','rx','I','W','r']],
-  ['Eixo y', ['Iy','Wy','Zy','ry','rz']],
-  ['Estabilidade e torção', ['rt','It','Cw','lf','lw','eff']]
+  ['Eixo y', ['Iy','Wy','Zy','ry','Iz','rz','ta']],
+  ['Estabilidade e torção', ['rt','It','Ct','Cw','ro','lf','lw','hw','eff']]
 ];
 
 /* ---------- geometria ---------- */
@@ -37,6 +44,10 @@ function outline(shape, g) {
     case 'Ue': { const {H,B,c,t} = g; return {rings:[[[0,0],[B,0],[B,c],[B-t,c],[B-t,t],[t,t],[t,H-t],[B-t,H-t],[B-t,H-c],[B,H-c],[B,H],[0,H]]]}; }
     case 'T': { const {b,t} = g; return {rings:[[[-b/2,0],[b/2,0],[b/2,t],[t/2,t],[t/2,b],[-t/2,b],[-t/2,t],[-b/2,t]]]}; }
     case 'L': { const {b,t} = g; return {rings:[[[0,0],[t,0],[t,b-t],[b,b-t],[b,b],[0,b]]]}; }
+    case 'LU': { const {b,bs,t} = g; return {rings:[[[0,0],[t,0],[t,b-t],[bs,b-t],[bs,b],[0,b]]]}; }   /* abas desiguais: b vertical, bs horizontal */
+    case 'TW': { const {d,bf,tw,tf} = g; return {rings:[[[-bf/2,0],[bf/2,0],[bf/2,tf],[tw/2,tf],[tw/2,d],[-tw/2,d],[-tw/2,tf],[-bf/2,tf]]]}; }
+    case '2L': { const {d,b,t,s} = g, a = s/2;       /* duas cantoneiras costas com costas, afastadas de s */
+      return {rings:[[[a,0],[a+t,0],[a+t,d-t],[a+b,d-t],[a+b,d],[a,d]], [[-a,0],[-a,d],[-a-b,d],[-a-b,d-t],[-a-t,d-t],[-a-t,0]]]}; }
     case 'RHS': { const {B,H,t} = g; const ro = Math.min(2*t, Math.min(B,H)/2), ri = Math.max(ro - t, 0);
       return {rings:[rrect(B,H,ro), rrect(B-2*t,H-2*t,ri)]}; }
     case 'FB': { const {b,t} = g; return {rings:[[[0,0],[b,0],[b,t],[0,t]]]}; }
