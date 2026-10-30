@@ -177,5 +177,20 @@ const AISC_DIG = {m:1, d:0, bf:0, tw:2, tf:2, b:1, bs:1, t:1, D:1, Di:1, B:1, H:
   FAM.splice(FAM.findIndex(f => f.rho), 0, {id, group:'Perfis americanos (AISC)', label, title, icon:[shape, AISC_ICON[shape]], desc,
     cols:AISC_COLS[shape], dig:AISC_DIG, len:shape === 'RHS' || shape === 'CHS' ? 6 : 12, src:'AISC Shapes Database v15.0', def});
 });
+/* ---------- perfis europeus: DIN 1025 (js/dados/perfis-din.js) ---------- */
+[ /* id, chave em DIN, rótulo, título, descrição, nome alternativo, bitola padrão */
+  ['dheb','HEB','HEB','Perfis HEB (DIN 1025-2)','Série IPB de abas paralelas e largas, a mais usada em pilares na Europa. HEB 300 = HE 300 B = IPB 300.', n => `HE ${n.slice(4)} B · IPB ${n.slice(4)}`, 'HEB 200'],
+  ['dhea','HEA','HEA','Perfis HEA (DIN 1025-3)','Série IPBl, mais leve que a HEB para a mesma altura nominal. HEA 300 = HE 300 A = IPBl 300.', n => `HE ${n.slice(4)} A · IPBl ${n.slice(4)}`, 'HEA 200'],
+  ['dinp','I','I (INP)','Perfis I de abas inclinadas (DIN 1025-1)','Série INP, abas com inclinação de 14 %; r1 = raio alma–aba, r2 = raio da ponta da aba. Desenho simplificado com abas paralelas.', n => `INP ${n.slice(2)}`, 'I 200'],
+].forEach(([id, k, label, title, desc, alt, def]) => {
+  rows[id] = DIN[k].map((r, i) => {
+    const {n, ...p} = r;
+    if (p.Wx && p.m) p.eff = p.Wx / p.m;
+    return {id:id+i, name:n, sub:alt(n), shape:'I', dim:{d:p.d, bf:p.bf, tw:p.tw, tf:p.tf}, common:false, p};
+  });
+  FAM.splice(FAM.findIndex(f => f.rho), 0, {id, group:'Perfis europeus (DIN)', label, title, icon:['I', AISC_ICON.I], desc,
+    cols:['m','d','bf','tw','tf','A','Ix','Wx','Zx','Iy','Wy','ry','eff'], dig:{m:1, d:0, bf:0, tw:1, tf:1, A:1, Ix:0, Iy:0}, len:12,
+    src:'DIN 1025' + (k === 'HEB' ? '-2' : k === 'HEA' ? '-3' : '-1') + ' (1995)', def});
+});
 const famById = Object.fromEntries(FAM.map(f => [f.id, f]));
 const MATS = [['Aço carbono',7850],['Aço inox 304',7930],['Aço inox 316',7980],['Alumínio 6063',2700],['Latão',8500],['Cobre',8960]];

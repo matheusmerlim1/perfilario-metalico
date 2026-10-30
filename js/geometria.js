@@ -17,12 +17,15 @@ const P = {
   Di:['Di','mm',1,'Diâmetro interno'], tdes:['t proj.','mm',2,'Espessura de projeto'], g:['g','mm',0,'Gabarito de furação na mesa'],
   y:['y','cm',2,'Centroide (outra face)'], eo:['eo','cm',2,'Centro de cisalhamento (face da alma)'],
   Iz:['Iz','cm⁴',1,'Momento de inércia mínimo'], ta:['tan α','',3,'Inclinação do eixo z'], hw:['h/tw','',2,'Esbeltez da alma'],
-  Ct:['C','cm³',1,'Constante de torção (tubo)'], ro:['r0','cm',2,'Raio de giração polar']
+  Ct:['C','cm³',1,'Constante de torção (tubo)'], ro:['r0','cm',2,'Raio de giração polar'],
+  /* perfis DIN */
+  rr:['r','mm',0,'Raio de concordância alma–mesa'], rr2:['r2','mm',1,'Raio da ponta da mesa'],
+  Sx:['Sx','cm³',1,'Momento estático da meia seção'], sx:['sx','cm',2,'Braço de alavanca Ix/Sx']
 };
 const GROUPS = [
-  ['Dimensões', ['d','bf','tw','tf','h','dl','k','k1','T','H','B','c','b','bs','t','tdes','s','D','Di','g']],
+  ['Dimensões', ['d','bf','tw','tf','h','dl','rr','rr2','k','k1','T','H','B','c','b','bs','t','tdes','s','D','Di','g']],
   ['Seção', ['m','A','u','x','y','eo']],
-  ['Eixo x', ['Ix','Wx','Zx','rx','I','W','r']],
+  ['Eixo x', ['Ix','Wx','Zx','rx','Sx','sx','I','W','r']],
   ['Eixo y', ['Iy','Wy','Zy','ry','Iz','rz','ta']],
   ['Estabilidade e torção', ['rt','It','Ct','Cw','ro','lf','lw','hw','eff']]
 ];
