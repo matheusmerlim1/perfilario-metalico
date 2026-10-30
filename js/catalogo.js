@@ -192,5 +192,39 @@ const AISC_DIG = {m:1, d:0, bf:0, tw:2, tf:2, b:1, bs:1, t:1, D:1, Di:1, B:1, H:
     cols:['m','d','bf','tw','tf','A','Ix','Wx','Zx','Iy','Wy','ry','eff'], dig:{m:1, d:0, bf:0, tw:1, tf:1, A:1, Ix:0, Iy:0}, len:12,
     src:'DIN 1025' + (k === 'HEB' ? '-2' : k === 'HEA' ? '-3' : '-1') + ' (1995)', def});
 });
+/* ---------- catálogo ArcelorMittal 2008: europeus, britânicos e japoneses (js/dados/perfis-arcelor.js) ---------- */
+const ARC_DIM = {I: AISC_DIM.I, U: AISC_DIM.U, LU: p => ({b:p.b, bs:p.bs, t:p.t}), T: p => ({b:p.b, t:p.t})};
+const ARC_COLS = {I: AISC_COLS.I, U: AISC_COLS.U, LI: ['m','b','t','A','I','W','r','rz','x'], LU: AISC_COLS.LU,
+  T: ['m','d','t','A','Ix','Wx','rx','Iy','Wy','ry','x']};
+/* HE 300 B também como HEB 300 (e HEA, HEAA, HEM, HEC) */
+const arcAlt = n => { const m = n.match(/^HE (\d+) (AA|A|B|C|M)$/); return m ? `HE${m[2]} ${m[1]}` : ''; };
+[ /* id, chave em ARCELOR, forma, grupo, rótulo, título, descrição, bitola padrão */
+  ['eipe','IPE','I','E','IPE','Perfis IPE','Abas paralelas, série europeia de vigas (EN 10365). Variantes: AA e A (mais leves), O e V (mais pesadas), além das bitolas normais.','IPE 200'],
+  ['eipn','IPN','I','E','IPN','Perfis IPN (I europeu)','Abas inclinadas a 14 % (DIN 1025-1). Desenho simplificado com abas paralelas.','IPN 200'],
+  ['ehe','HE','I','E','HE','Perfis HE (HEAA, HEA, HEB, HEC, HEM e pesados)','Abas largas e paralelas: HE 300 A = HEA 300, HE 300 B = HEB 300, HE 300 M = HEM 300; as bitolas "HE 1000 × 584" são as pesadas.','HE 300 B'],
+  ['ehl','HL','I','E','HL','Perfis HL (abas largas e altas)','Vigas de grande altura (920 a 1100 mm) para pontes e estruturas pesadas.'],
+  ['ehd','HD','I','E','HD','Perfis HD (pilares pesados)','Pilares de abas largas e espessas.'],
+  ['ehp','HP','I','E','HP (europeu)','Perfis HP europeus (estaca)','Estacas e pilares, alma e mesa de mesma espessura.'],
+  ['eupe','UPE','U','E','UPE','Perfis UPE (U de abas paralelas)','U europeu de abas paralelas. x = face de trás da alma ao centroide; eo = ao centro de cisalhamento.','UPE 200'],
+  ['eupn','UPN','U','E','UPN','Perfis UPN (U de abas inclinadas)','U europeu com abas inclinadas (8 % até 300 mm, 5 % acima). Desenho simplificado com abas paralelas.','UPN 200'],
+  ['eli','LI','LU','E','Cantoneira igual','Cantoneiras de abas iguais (EN 10056)','Série métrica europeia. x = face externa ao centroide; rz = raio de giração mínimo (eixo v).','L 100 × 100 × 10'],
+  ['eld','LD','LU','E','Cantoneira desigual','Cantoneiras de abas desiguais (EN 10056)','b = aba maior, b₂ = aba menor; x e y = faces externas ao centroide.','L 150 × 90 × 10'],
+  ['et','T','T','E','T (EN 10055)','Perfis T de abas iguais (EN 10055)','Altura igual à largura e espessura única.'],
+  ['bub','UB','I','B','UB','Perfis UB (vigas britânicas)','Universal beams, BS 4-1: altura × largura × massa (kg/m).','UB 305 × 165 × 40'],
+  ['buc','UC','I','B','UC','Perfis UC (pilares britânicos)','Universal columns, BS 4-1.','UC 203 × 203 × 46'],
+  ['bj','J','I','B','J','Perfis J (joists britânicos)','Vigas de abas inclinadas, BS 4-1. Desenho simplificado com abas paralelas.'],
+  ['bpfc','PFC','U','B','PFC','Perfis PFC (U britânico de abas paralelas)','Parallel flange channels, BS 4-1.'],
+  ['jh','JIS','I','J','H (JIS)','Perfis H japoneses (JIS G 3192)','Designação: altura × largura × alma × mesa (mm).'],
+].forEach(([id, k, shape, g, label, title, desc, def]) => {
+  rows[id] = ARCELOR[k].map((r, i) => {
+    const {n, ...p} = r;
+    if (p.Wx && p.m) p.eff = p.Wx / p.m;
+    return {id:id+i, name:n.replace(/ x /g, ' × '), sub:arcAlt(n) || title.replace(/^Perfis /, ''), shape, dim:ARC_DIM[shape](p), common:false, p};
+  });
+  FAM.splice(FAM.findIndex(f => f.rho), 0, {id, label, title, desc, def,
+    group:{E:'Perfis europeus (ArcelorMittal)', B:'Perfis britânicos (BS 4-1)', J:'Perfis japoneses (JIS)'}[g],
+    icon:[shape, shape === 'LU' ? AISC_ICON.LU : shape === 'T' ? {b:84,t:13} : AISC_ICON[shape]],
+    cols:ARC_COLS[k === 'LI' ? 'LI' : shape], dig:AISC_DIG, len:12, src:'ArcelorMittal, Sales programme (2008)'});
+});
 const famById = Object.fromEntries(FAM.map(f => [f.id, f]));
 const MATS = [['Aço carbono',7850],['Aço inox 304',7930],['Aço inox 316',7980],['Alumínio 6063',2700],['Latão',8500],['Cobre',8960]];

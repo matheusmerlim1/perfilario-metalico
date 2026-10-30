@@ -9,6 +9,7 @@ Catálogo interativo de perfis metálicos estruturais e de produtos de catálogo
 - **Perfis de aço:** W e HP, I, U, T, cantoneiras, tubos quadrados, retangulares e redondos, U enrijecido, U simples, barras chatas e redondas.
 - **Perfis americanos (AISC Shapes Database v15.0, 2 091 bitolas):** W, HP, S, M, C, MC, cantoneiras L (abas iguais e desiguais), cantoneiras duplas 2L, WT, MT, ST, tubos HSS retangulares e redondos e Pipe, com designação métrica e americana (W 100 × 19,3 = W 4 × 13).
 - **Perfis europeus (DIN 1025-1/-2/-3):** HEB, HEA e I (INP), 68 bitolas.
+- **Catálogo ArcelorMittal (2008), 662 bitolas:** IPE (com AA, A, O), IPN, HE (AA, A, B, C, M e pesados), HL, HD, HP europeu, UPE, UPN, cantoneiras de abas iguais e desiguais (EN 10056), T (EN 10055), britânicos UB, UC, J e PFC (BS 4-1) e H japoneses (JIS G 3192).
 - **Catálogos de fabricantes** (416 famílias, 4 976 itens, 266 materiais):
   - chapas de aço (Tenax);
   - perfis, grades, escadas e eletrocalhas em fibra de vidro (Gran e Stratus);
@@ -41,6 +42,7 @@ js/portfolio-btn.js     posicionamento do botão de portfólio
 js/dados/perfis-gerdau.js   tabela Gerdau (W, HP, I, U, T, cantoneiras)
 js/dados/perfis-aisc.js     perfis AISC (gerado por tools/importar-aisc.py a partir do AISC Shapes Database v15.0)
 js/dados/perfis-din.js      perfis DIN 1025 HEB/HEA/I (gerado por tools/importar-din.py)
+js/dados/perfis-arcelor.js  catálogo ArcelorMittal 2008 (gerado por tools/importar-arcelor.py; o PDF não é versionado)
 js/dados/fab-*.js       catálogos de fabricantes (gerados, não edite à mão)
 dados/*.json            catálogos de fabricantes transcritos (fonte dos fab-*.js)
 tools/gerar-dados.py    gera js/dados/fab-*.js e a lista de <script> do index.html
