@@ -19,4 +19,9 @@
   #mr-portfolio-btn { padding: .45rem; }
   #mr-portfolio-btn span { display: none; }
 }
+/* sem animação de hover para quem pede menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  #mr-portfolio-btn { transition: none; }
+  #mr-portfolio-btn:hover { transform: none; }
+}
 @media print { #mr-portfolio-btn { display: none; } }

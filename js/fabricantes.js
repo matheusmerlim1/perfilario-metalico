@@ -66,7 +66,7 @@ function iconFor(fj, tipo) {
   return fj.icone || 'outro';
 }
 function famIcon(f, chip) {
-  if (f.rho) return '<span class="rho">ρ</span>';
+  if (f.rho) return '<span class="rho" aria-hidden="true">ρ</span>';
   if (f.icon) return icon(...f.icon);
   const sh = FAB_SHAPE[f.iconKey];
   if (sh) return icon(sh[0], FAB_ICON_DIM[sh[0]]);

@@ -7,17 +7,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="css/style.css?v=20261025">
-<link rel="stylesheet" href="css/portfolio-btn.css">
+<link rel="stylesheet" href="css/style.css?v=20261028">
+<link rel="stylesheet" href="css/portfolio-btn.css?v=20261028">
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="wrap">
   <header class="top">
     <div class="brand">
       <h1>Perfilário</h1>
       <p>Perfis metálicos estruturais e produtos de catálogos de fabricantes: dimensões, propriedades, massa e materiais.</p>
     </div>
-    <div class="tblock" aria-label="Constantes do aço estrutural">
+    <div class="tblock" role="group" aria-label="Constantes do aço estrutural">
       <div><b>Densidade ρ</b>7 850 kg/m³</div>
       <div><b>Módulo E</b>200 000 MPa</div>
       <div><b>Módulo G</b>77 000 MPa</div>
@@ -28,7 +29,8 @@
 
   <nav class="nav" id="nav" aria-label="Famílias de perfis"></nav>
 
-  <section id="catalog">
+  <main id="conteudo" tabindex="-1">
+  <section id="catalog" aria-labelledby="ftitle">
     <div class="fhead">
       <div class="ftop"><div><p class="crumb" id="fcrumb"></p><h2 id="ftitle"></h2></div><div class="fmeta" id="fmeta"></div></div>
       <div class="fdwrap"><p id="fdesc"></p><button class="fmore" type="button" id="fmore" hidden aria-expanded="false">Ler mais</button></div>
@@ -41,11 +43,15 @@
         <div class="twrap" id="twrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
         <div class="count" id="count"></div>
       </div>
-      <aside class="detail" id="detail" aria-live="polite"></aside>
+      <!-- tabindex: no desktop o painel rola sozinho e, em itens só de texto, não teria o que focar (WCAG 2.1.1) -->
+      <section class="detail" id="detail" tabindex="0" aria-label="Detalhes do item selecionado"></section>
     </div>
   </section>
 
   <section id="materials" class="mat" hidden></section>
+  <!-- anúncio curto para leitor de tela: item escolhido e quantos itens a tabela mostra -->
+  <p class="sr-only" id="anuncio" role="status"></p>
+  </main>
 
   <footer class="foot">
     <div><strong>Fontes.</strong> Perfis W, HP, I, U, T e cantoneiras: <em>Tabela de bitolas Gerdau</em> (valores transcritos do catálogo). Perfis americanos W, HP, S, M, C, MC, L, 2L, WT, MT, ST, HSS e Pipe: <em>AISC Shapes Database v15.0</em> (colunas métricas, convertidas para cm). Perfis HEB, HEA e I (INP): <em>DIN 1025-2, -3 e -1</em> (1995); Zx = 2·Sx. Perfis europeus (IPE, IPN, HE, HL, HD, HP, UPE, UPN, cantoneiras EN 10056, T EN 10055), britânicos (UB, UC, J, PFC) e japoneses (H JIS): <em>ArcelorMittal, Sales programme — Sections and merchant bars</em> (2008). Tubos, perfis formados a frio e barras: propriedades calculadas pela geometria da seção, aço com ρ = 7 850 kg/m³.</div>
@@ -74,19 +80,21 @@
 <script src="js/formatacao.js"></script>
 <script src="js/geometria.js"></script>
 <script src="js/catalogo.js"></script>
-<script src="js/desenho.js"></script>
-<script src="js/fabricantes.js"></script>
-<script src="js/app.js"></script>
+<script src="js/desenho.js?v=20261028"></script>
+<script src="js/fabricantes.js?v=20261028"></script>
+<script src="js/app.js?v=20261028"></script>
 
 <!-- === Botao de volta ao portfolio - cole antes de </body> === -->
+<nav aria-label="Portf&oacute;lio">
 <a id="mr-portfolio-btn" href="https://matheusmerlim1.github.io/" target="_blank" rel="noopener"
-   aria-label="Abrir o portf&oacute;lio de Matheus Raposo" title="Ver todos os meus projetos">
+   aria-label="Portf&oacute;lio de Matheus Raposo (abre em nova aba)" title="Ver todos os meus projetos">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>
   </svg>
   <span>Portf&oacute;lio</span>
 </a>
+</nav>
 <script src="js/portfolio-btn.js"></script>
 </body>
 </html>

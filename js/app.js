@@ -68,25 +68,27 @@ function renderNav() {
   const f0 = fam(), cats = [...new Set(FAM.map(f => f.group))];
   const inCat = FAM.filter(f => f.group === f0.group), tipos = [...new Set(inCat.map(f => f.tipo))];
   const inTipo = inCat.filter(f => f.tipo === f0.tipo), makers = [...new Set(inTipo.map(f => f.maker || ''))];
-  const btn = f => `<button class="fbtn" data-f="${f.id}" aria-pressed="${f.id===S.fam}">${famIcon(f, true)}${esc(f.label)}</button>`;
+  const btn = f => `<button class="fbtn" type="button" data-f="${f.id}" aria-pressed="${f.id===S.fam}">${famIcon(f, true)}${esc(f.label)}</button>`;
   const cnt = g => FAM.filter(f => f.group === g).reduce((n, f) => n + (rows[f.id] ? rows[f.id].length : 0), 0);
-  $('nav').innerHTML = `<div class="gtabs" role="tablist" aria-label="Categorias">${cats.map(g =>
-      `<button class="gbtn" role="tab" data-g="${esc(g)}" aria-pressed="${g===f0.group}" aria-selected="${g===f0.group}" title="${cnt(g)} itens">${esc(g)}</button>`).join('')}</div>
-    ${tipos.length > 1 ? `<div class="ttabs" aria-label="Tipos de produto">${tipos.map(t => {
+  /* categorias: botões de alternância (aria-pressed) num grupo, como os tipos e as famílias.
+     role="tab" pedia tabpanel e navegação por setas, que a página não tem */
+  $('nav').innerHTML = `<div class="gtabs" role="group" aria-label="Categorias">${cats.map(g =>
+      `<button class="gbtn" type="button" data-g="${esc(g)}" aria-pressed="${g===f0.group}" title="${cnt(g)} itens">${esc(g)}</button>`).join('')}</div>
+    ${tipos.length > 1 ? `<div class="ttabs" role="group" aria-label="Tipos de produto">${tipos.map(t => {
       const n = inCat.filter(f => f.tipo === t).length;
-      return `<button class="tbtn" data-t="${esc(t)}" aria-pressed="${t===f0.tipo}">${famIcon(inCat.find(f => f.tipo === t), true)}${esc(t)}${n > 1 ? `<small>${n}</small>` : ''}</button>`;
+      return `<button class="tbtn" type="button" data-t="${esc(t)}" aria-pressed="${t===f0.tipo}">${famIcon(inCat.find(f => f.tipo === t), true)}${esc(t)}${n > 1 ? `<small>${n}</small>` : ''}</button>`;
     }).join('')}</div>` : ''}
     ${inTipo.length > 1 ? (() => {
       /* muitas famílias: lista compacta em colunas, só texto */
-      const dense = inTipo.length > 10, b = dense ? f => `<button class="fbtn" data-f="${f.id}" aria-pressed="${f.id===S.fam}">${esc(f.label)}</button>` : btn;
+      const dense = inTipo.length > 10, b = dense ? f => `<button class="fbtn" type="button" data-f="${f.id}" aria-pressed="${f.id===S.fam}">${esc(f.label)}</button>` : btn;
       const body = makers.length < 2 && !dense ? inTipo.map(b).join('') : makers.map(m =>
         `<div class="fmk">${makers.length > 1 || dense ? `<span>${esc(m)}</span>` : ''}<div class="fl">${inTipo.filter(f => (f.maker || '') === m).map(b).join('')}</div></div>`).join('');
-      if (!dense) return `<div class="ftabs">${body}</div>`;
+      if (!dense) return `<div class="ftabs" role="group" aria-label="Famílias">${body}</div>`;
       /* lista longa: recolhida, mostra só a família atual; abre com "Ver todas" */
       const sum = `<div class="fsum"><span class="lbl">Família</span><b>${esc(f0.label)}</b>${f0.maker ? `<small>${esc(f0.maker)}</small>` : ''}
         ${S.navOpen ? '<input id="fq" type="search" placeholder="filtrar famílias" autocomplete="off" aria-label="Filtrar famílias">' : ''}
         <button class="tg fexp" type="button" id="fexp" aria-expanded="${!!S.navOpen}">${S.navOpen ? 'Ocultar lista ▴' : `Ver todas as ${inTipo.length} famílias ▾`}</button></div>`;
-      return `<div class="ftabs dense${S.navOpen ? ' open' : ''}">${sum}${S.navOpen ? `<div class="flist">${body}</div>` : ''}</div>`;
+      return `<div class="ftabs dense${S.navOpen ? ' open' : ''}" role="group" aria-label="Famílias">${sum}${S.navOpen ? `<div class="flist">${body}</div>` : ''}</div>`;
     })() : ''}`;
   /* no celular as linhas rolam na horizontal: traz a selecionada para a vista */
   for (const sel of ['.gbtn[aria-pressed="true"]', '.tbtn[aria-pressed="true"]', '.fbtn[aria-pressed="true"]']) {
@@ -132,8 +134,8 @@ function renderFamily() {
 }
 function renderHead() {
   const f = fam(), cols = tcols(f);
-  $('tbl').querySelector('thead').innerHTML = `<tr><th scope="col" data-k=""><span class="s">${f.gen ? 'Produto' : 'Perfil'}</span><span class="un">${f.gen ? 'modelo' : 'bitola'}</span></th>` +
-    cols.map(k => `<th scope="col" data-k="${k}"${S.sort&&S.sort.k===k?` aria-sort="${S.sort.dir>0?'ascending':'descending'}"`:''} title="${esc(PR(f,k)[3])}"><span class="s">${esc(PR(f,k)[0])}</span><span class="un">${esc(PR(f,k)[1]) || '&nbsp;'}</span></th>`).join('') + '</tr>';
+  $('tbl').querySelector('thead').innerHTML = `<tr><th scope="col" tabindex="0" data-k=""><span class="s">${f.gen ? 'Produto' : 'Perfil'}</span><span class="un">${f.gen ? 'modelo' : 'bitola'}</span></th>` +
+    cols.map(k => `<th scope="col" tabindex="0" data-k="${k}"${S.sort&&S.sort.k===k?` aria-sort="${S.sort.dir>0?'ascending':'descending'}"`:''} title="${esc(PR(f,k)[3])}"><span class="s">${esc(PR(f,k)[0])}</span><span class="un">${esc(PR(f,k)[1]) || '&nbsp;'}</span></th>`).join('') + '</tr>';
   const s = $('sortk'); if (s) s.value = S.sort ? S.sort.k : '';
 }
 function renderTable() {
@@ -152,14 +154,14 @@ function renderTable() {
   const grouped = !S.sort && usual.length && rest.length;
   const grp = (t, n) => `<tr class="grp"><td colspan="${cols.length+1}">${t} <small>${n} ${noun(f, n)}</small></td></tr>`;
   const rowsHtml = l => l.map(r => `<tr data-id="${r.id}" tabindex="0"${r.id===S.sel[f.id]?' class="sel" aria-selected="true"':''}>
-    <td><span class="nm"><span class="dot${r.common?'':' off'}" ${r.common?'title="Uso frequente"':''}></span><span class="nt">${esc(r.name)}${
+    <td><span class="nm"><span class="dot${r.common?'':' off'}"${r.common?' role="img" aria-label="Uso frequente" title="Uso frequente"':''}></span><span class="nt">${esc(r.name)}${
       r.sub && f.gen ? `<small>${esc(r.sub)}</small>` : ''}${qhit(r)}</span>${
-      r.H?'<span class="tag h">H</span>':''}${r.enc?'<span class="tag enc" title="Sob encomenda">enc.</span>':''}${
+      r.H?'<span class="tag h" title="Seção tipo H"><span aria-hidden="true">H</span><span class="sr-only">seção tipo H</span></span>':''}${r.enc?'<span class="tag enc" title="Sob encomenda"><span aria-hidden="true">enc.</span><span class="sr-only">sob encomenda</span></span>':''}${
       best&&r.id===best.id?'<span class="tag lt">mais leve</span>':''}</span></td>
     ${cols.map(k => `<td${k===hk?' class="hl"':''}>${fv(val(r,k), dg(f,k))}</td>`).join('')}</tr>`).join('');
   $('tbl').querySelector('tbody').innerHTML = !list.length
     ? `<tr><td colspan="${cols.length+1}" class="empty">Nenhum${f.gen ? ' item' : 'a bitola'} atende aos filtros. Reduza o requisito ou desmarque um filtro.</td></tr>`
-    : grouped ? grp('<span class="dot"></span>Mais usuais', usual.length) + rowsHtml(usual) + grp('Demais bitolas', rest.length) + rowsHtml(rest)
+    : grouped ? grp('<span class="dot" aria-hidden="true"></span>Mais usuais', usual.length) + rowsHtml(usual) + grp('Demais bitolas', rest.length) + rowsHtml(rest)
     : rowsHtml(list);
   /* a mesma busca nas outras famílias: atalhos que trocam de família mantendo a busca */
   const qa = $('qall');
@@ -180,7 +182,7 @@ function renderTable() {
       : `Nenhum${f.gen ? ' item' : 'a bitola'} desta família atende a <strong>${esc(rk[0])} ≥ ${esc(S.req.v)} ${esc(rk[1])}</strong>.`;
   } else b.hidden = true;
   $('count').innerHTML = `<span>${list.length} de ${rows[f.id].length} ${noun(f, rows[f.id].length)}</span>` +
-    (rows[f.id].some(r => r.common) ? '<span class="k"><span class="dot"></span>uso frequente</span>' : '') +
+    (rows[f.id].some(r => r.common) ? '<span class="k"><span class="dot" aria-hidden="true"></span>uso frequente</span>' : '') +
     (f.id==='w' ? '<span class="k"><span class="tag h">H</span> seção tipo H, indicada para pilares</span><span class="k"><span class="tag enc">enc.</span> produzido sob encomenda</span>' : '') +
     '<span>Dimensões e demais propriedades no painel ao lado. Use “Ordenar por” para trazer outra coluna à tabela.</span>';
 }
@@ -258,7 +260,7 @@ function renderDetail() {
       (sh==='RHS' && 2*g.t >= Math.min(g.B,g.H)) || (sh==='CHS' && 2*g.t >= g.D) ||
       (sh==='Ue' && (2*g.t >= g.H || 2*g.t >= g.B || g.c <= g.t || 2*g.c >= g.H)) || (sh==='Us' && (2*g.t >= g.H || g.t >= g.B)) ||
       (sh==='FB' && g.t > g.b) || (sh==='I' && (2*g.tf >= g.d || g.tw >= g.bf));
-    if (bad) err = 'Dimensões inválidas: confira se a espessura cabe na seção e se todos os valores são positivos.';
+    if (bad) { err = 'Dimensões inválidas: confira se a espessura cabe na seção e se todos os valores são positivos.'; $('anuncio').textContent = err; }
     else r = {id:'custom', ...NAMES[f.id](g), sub:'dimensões personalizadas', shape:sh, dim:g, calc:true, p:compute(sh, g)};
   }
   const L = S.L[f.id] ?? f.len;
@@ -302,7 +304,8 @@ function updateCalc() {
   if ($('oM')) $('oM').textContent = ok ? nf(t, t < 1 ? 3 : t < 100 ? 2 : 1) : '—';
   if ($('oU')) $('oU').textContent = ok && S._u ? nf(S._u * L * q, 2) : '—';
 }
-const tbl = (head, body) => `<div class="twrap"><table><thead><tr>${head.map((h,i) => `<th${i?'':' style="cursor:default"'}>${h}</th>`).join('')}</tr></thead><tbody>${
+/* as tabelas dos Materiais rolam: região com nome e foco pelo teclado (WCAG 2.1.1) */
+const tbl = (head, body, nome) => `<div class="twrap" tabindex="0" role="region" aria-label="${esc(nome || 'Tabela')}"><table><thead><tr>${head.map((h,i) => `<th${i?'':' style="cursor:default"'}>${h}</th>`).join('')}</tr></thead><tbody>${
   body.map(r => `<tr style="cursor:default">${r.map(c => c && c.ot != null ? `<td class="ot">${c.ot}</td>` : `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 function renderMaterials() {
   if ($('materials').dataset.done) return;
@@ -326,14 +329,14 @@ function renderMaterials() {
           ['ASTM A992','345 a 450','450 mín.','18 mín.','sob encomenda'],
           ['Aço COR 500 (patinável)','370 mín.','500 mín.','18 mín.','sob encomenda'],
           ['ASTM A131 AH32 (naval)','315 mín.','440 a 590','19 mín.','sob encomenda'],
-          ['ASTM A131 AH36 (naval)','355 mín.','490 a 620','19 mín.','sob encomenda']])}
+          ['ASTM A131 AH36 (naval)','355 mín.','490 a 620','19 mín.','sob encomenda']], 'Aços dos perfis W e HP')}
         <p class="note">Tolerância de massa linear: +3 % / −2,5 % para bitolas abaixo de 148 kg/m e ±2,5 % para as demais.</p></div>
       <div class="card"><h3>Aços dos perfis I, U, T e cantoneiras</h3><p>Graus da tabela Gerdau, com a equivalência na NBR 7007.</p>
         ${tbl(['Especificação','f<sub>y</sub> (MPa)','f<sub>u</sub> (MPa)','Along. 200 mm','NBR 7007'], [
           ['<strong>ASTM A36</strong>','250 mín.','400 a 550','20 %','MR 250'],
           ['ASTM A572 Grau 50','350 mín.','450 mín.','18 %','AR 350'],
           ['ASTM A572 Grau 60','415 mín.','520 mín.','16 %','AR 415'],
-          ['ASTM A588 (patinável)','350 mín.','485 mín.','18 %','AR 350 COR']])}
+          ['ASTM A588 (patinável)','350 mín.','485 mín.','18 %','AR 350 COR']], 'Aços dos perfis I, U, T e cantoneiras')}
         <p class="note">O A588 é produzido sob encomenda.</p></div>
     </div>
     <div class="cols2">
@@ -346,7 +349,7 @@ function renderMaterials() {
           ['NBR 7008 ZAR 250','chapa galvanizada (steel frame, terças)','250','360'],
           ['NBR 7008 ZAR 345','chapa galvanizada estrutural','345','430'],
           ['ASTM A36','barras chatas e redondas','250','400'],
-          ['SAE 1008 / 1020','serralheria, uso não estrutural','sem garantia','sem garantia']])}</div>
+          ['SAE 1008 / 1020','serralheria, uso não estrutural','sem garantia','sem garantia']], 'Tubos, formados a frio e barras')}</div>
       <div class="card"><h3>Densidade de outros metais</h3><p>Para estimar a massa de um perfil de mesma geometria em outro material, multiplique a massa em aço pela razão ρ / 7 850.</p>
         ${tbl(['Metal','ρ (kg/m³)','Fator sobre o aço','E (GPa)','f<sub>y</sub> típico (MPa)'], [
           ['<strong>Aço carbono</strong>','7 850','1,000','200','250 a 415'],
@@ -357,7 +360,7 @@ function renderMaterials() {
           ['Ferro fundido cinzento','7 200','0,917','100','não se aplica'],
           ['Latão','8 500','1,083','100','variável'],
           ['Cobre','8 960','1,141','117','variável'],
-          ['Zinco (galvanização)','7 140','0,910','não se aplica','não se aplica']])}
+          ['Zinco (galvanização)','7 140','0,910','não se aplica','não se aplica']], 'Densidade de outros metais')}
         <p class="note">Alumínio tem cerca de 1/3 da rigidez do aço: com a mesma seção, a flecha é quase 3 vezes maior.</p></div>
     </div>
     ${MAT_FAB.length ? `<div class="card"><h3>Materiais dos catálogos de fabricantes</h3>
@@ -375,7 +378,7 @@ function renderMatFab() {
     (!q || JSON.stringify(m).toLowerCase().includes(q)));
   $('mtab').innerHTML = list.length ? tbl(['Material','Tipo','Norma','ρ (kg/m³)','f<sub>y</sub> (MPa)','f<sub>u</sub> (MPa)','E (MPa)','Outros dados','Uso','Fonte'],
     list.map(m => [`<strong>${esc(m.nome)}</strong>`, n(m.tipo), n(m.norma), n(m.rho), n(m.fy), n(m.fu), n(m.E),
-      {ot: Object.entries(m.outros || {}).map(([k, v]) => `<b>${esc(k)}:</b> ${n(v)}`).join(' · ')}, n(m.uso), n(m.fonte)]))
+      {ot: Object.entries(m.outros || {}).map(([k, v]) => `<b>${esc(k)}:</b> ${n(v)}`).join(' · ')}, n(m.uso), n(m.fonte)]), 'Materiais dos catálogos de fabricantes')
     : '<p class="empty">Nenhum material encontrado.</p>';
 }
 
@@ -391,6 +394,8 @@ function select(id, scroll) {
   S.sel[S.fam] = id; S.custom = null;
   document.querySelectorAll('#tbl tbody tr').forEach(tr => { const on = tr.dataset.id === id; tr.classList.toggle('sel', on); on ? tr.setAttribute('aria-selected','true') : tr.removeAttribute('aria-selected'); });
   renderDetail();
+  /* o painel inteiro era aria-live e relia tudo a cada troca; agora só o nome é anunciado */
+  const r = findRow(id); if (r) $('anuncio').textContent = 'Selecionado: ' + r.name;
   if (scroll && window.innerWidth < 1060) $('detail').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
 }
 const num = v => parseFloat(String(v).replace(/\s/g,'').replace(',','.'));
@@ -424,6 +429,8 @@ const onFilter = e => {
     if (S.fam === 'l' && t.checked) { const o = t.dataset.tg === 'pol' ? 'mm' : 'pol'; S.tg.delete(o); const x = $('tg-'+o); if (x) { x.checked = false; x.parentElement.classList.remove('on'); } }
   }
   renderTable();
+  const f = fam(), n = visible().length;
+  $('anuncio').textContent = `${n} de ${rows[f.id].length} ${noun(f, rows[f.id].length)} na tabela`;
 };
 $('filters').addEventListener('input', onFilter);
 $('filters').addEventListener('change', e => { if (e.target.type === 'checkbox' || e.target.tagName === 'SELECT') onFilter(e); });
@@ -435,6 +442,13 @@ $('tbl').addEventListener('click', e => {
   const tr = e.target.closest('tr[data-id]'); if (tr) select(tr.dataset.id, true);
 });
 $('tbl').addEventListener('keydown', e => {
+  /* cabeçalho: Enter ou espaço ordenam, como o clique */
+  const th = e.target.closest('th');
+  if (th && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault(); const k = th.dataset.k;
+    S.sort = !k ? null : (S.sort && S.sort.k === k ? (S.sort.dir > 0 ? {k, dir:-1} : null) : {k, dir:1});
+    renderTable(); const n = $('tbl').querySelector(`th[data-k="${k}"]`); if (n) n.focus(); return;
+  }
   const tr = e.target.closest('tr[data-id]'); if (!tr) return;
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(tr.dataset.id, true); }
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); let n = tr; do { n = e.key === 'ArrowDown' ? n.nextElementSibling : n.previousElementSibling; } while (n && !n.dataset.id); if (n) { n.focus(); select(n.dataset.id, false); } }
