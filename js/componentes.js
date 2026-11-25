@@ -22,6 +22,21 @@ function compModel(f, r) {
     if (kp && V(kp) > 0) v.I = V(kp);
     return {tipo: 'manilha', v, curva: /curva|bow/.test(f.id), calc: [], ilus: ['cabeça do pino']};
   }
+  if (/gancho/.test(f.id) && f.props) {
+    /* ganchos Green Pin: a letra de cada coluna muda entre famílias, então tudo é achado pela descrição */
+    const ks = Object.keys(f.props), num = k => V(k) > 0;
+    const pick = (re, how = 'first') => { const c = ks.filter(k => re.test(_desc(f, k)) && num(k)); if (!c.length) return null;
+      return how === 'max' ? c.reduce((a, b) => V(b) > V(a) ? b : a) : c[0]; };
+    const kL = pick(/^Comprimento( externo)?$/, 'max'), kW = pick(/^Largura externa$/, 'max'), kO = pick(/^Abertura( do gancho)?$/);
+    const kT = pick(/^Espessura$/), kw = kT ? ks.slice(ks.indexOf(kT) + 1).find(k => /^Largura$/.test(_desc(f, k)) && num(k)) : null;
+    const kBi = pick(/interno do olhal/), kFo = pick(/externo do olhal/), kPin = pick(/^Diametro do pino$/i);
+    if (kL && kW && kO && kT && kw) {
+      const L = {L: kL, W: kW, O: kO, t: kT, w: kw, Bi: kBi, Fo: kFo, pin: kPin};
+      const v = Object.fromEntries(Object.entries(L).filter(([, k]) => k).map(([n, k]) => [n, V(k)]));
+      const fix = /-cl-|clevis/.test(f.id) || (kPin && !kBi) ? 'clevis' : /-se-|destorc|giratorio/.test(f.id) ? 'giratorio' : kBi ? 'olhal' : 'clevis';
+      return {tipo: 'gancho', v, L, fix, calc: [], ilus: ['curvatura do bojo e da ponta', 'trava', fix === 'clevis' ? 'garfo (exceto Ø do pino)' : fix === 'giratorio' ? 'cabeça giratória' : !kFo ? 'espessura do olhal' : ''].filter(Boolean)};
+    }
+  }
   if (_has(f, 'A', /rosca/i) && _has(f, 'B', /base/) && _has(f, 'C', /externo do olhal/) && _has(f, 'D', /interno do olhal/) && _has(f, 'E', /^Comprimento$/) && _has(f, 'F', /Espessura da base/) && ok('A', 'B', 'C', 'D', 'E', 'F'))
     return {tipo: 'olhal', v: {A: V('A'), B: V('B'), C: V('C'), D: V('D'), E: V('E'), F: V('F')}, calc: [], ilus: []};
   if (/^conti-/.test(f.id) && ok('P') && (V('d') > 0 || V('Tr') > 0)) {
@@ -46,11 +61,28 @@ function compModel(f, r) {
 
 const COMP_TXT = {
   manilha: m => `manilha · corpo Ø ${smart(m.v.A)} · pino Ø ${smart(m.v.B)} · vão interno ${smart(m.v.E)} × ${smart(m.v.F)} mm`,
+  gancho: m => `gancho · comprimento ${smart(m.v.L)} · largura ${smart(m.v.W)} · abertura ${smart(m.v.O)} · seção ${smart(m.v.t)} × ${smart(m.v.w)} mm (bojo circular; ${m.ilus.join(', ')} ilustrativos)`,
   olhal: m => `olhal · rosca Ø ${smart(m.v.A)} · olhal Ø ${smart(m.v.C)}/${smart(m.v.D)} mm`,
   fuso: m => `fuso Tr ${smart(m.v.d)} × ${smart(m.v.Ph)}${m.v.n > 1 ? ` (P ${smart(m.v.P)}, ${m.v.n} entradas)` : ''} · perfil ISO 2904`,
   porca: m => `porca Tr ${smart(m.v.d)} × ${smart(m.v.Ph)} · comprimento ${smart(m.v.L)} mm · furo no Ø menor D1 (rosca interna não modelada)`,
   cabo: m => `cabo Ø ${smart(m.v.d)} mm · 6 pernas + alma (construção e passo de torção ilustrativos)`,
 };
+
+/* gancho: linha de centro no plano (y para cima, centro do bojo na origem). Do catálogo: comprimento total L,
+   largura externa W, abertura O, seção t × w, olhal Bi/Fo, pino. A curvatura exata não é dada: bojo circular. */
+function hookGeom(m) {
+  const v = m.v, w = v.w, R = Math.max((v.W - v.w) / 2, w * 0.8);
+  const c = Math.min(1, Math.max(Math.cos(80 * Math.PI / 180), (v.O + w - R) / R)), phi = Math.acos(c);
+  const yBot = -(R + w / 2), yTop = yBot + v.L;
+  const ha = m.fix === 'olhal' ? (v.Fo || (v.Bi + w)) : m.fix === 'clevis' ? Math.max(2.4 * (v.pin || w / 2), w) : 0.22 * v.L;
+  const yS = Math.max(yTop - ha, R * 0.9), y1 = Math.max(R * 0.8, yS - 0.3 * (yS - R * 0.8));
+  const pts = [[0, yS], [0, y1]];
+  const C = [-R, y1 * 0.45];
+  for (let i = 1; i <= 16; i++) { const t = i / 16, a = (1 - t) ** 2, b = 2 * (1 - t) * t, d = t * t; pts.push([a * 0 + b * C[0] + d * -R, a * y1 + b * C[1] + d * 0]); }
+  const a0 = Math.PI, a1 = 2 * Math.PI + phi, na = 40;
+  for (let i = 1; i <= na; i++) { const a = a0 + (a1 - a0) * i / na; pts.push([R * Math.cos(a), R * Math.sin(a)]); }
+  return {pts, R, w, phi, yBot, yTop, yS, ha};
+}
 
 /* ---------- desenho 2D cotado ---------- */
 function svgKit() {
@@ -125,6 +157,29 @@ function compDrawing(m, nome) {
     if (v.I) K.H(X(-pinL / 2), X(pinL / 2), Y(0) + (v.C || v.B) / 2 * s + 48, Y(0) + v.B / 2 * s, `I = ${fm(v.I)}`);
     const h = Y(0) + (v.C || v.B) / 2 * s + (v.I ? 64 : 40);
     return K.svg(W, h, nome, ['medidas em mm (catálogo); corpo representado em formato D' + (m.curva ? ' — a curvatura do corpo da manilha curva não é dada' : ''), 'F medido da face do pino ao interno do corpo']);
+  }
+  if (m.tipo === 'gancho') {
+    const g = hookGeom(m), Lk = m.L, s = Math.min(330 / v.L, 250 / v.W), cx = 210, yt = 34;
+    const X = x => cx + x * s, Y = y => yt + (g.yTop - y) * s;
+    K.txt(0, 18, 'Vista frontal (plano do gancho)', 'start', 'vt');
+    /* contorno: linha de centro deslocada de ±w/2 */
+    const P = g.pts, side = sgn => P.map((p, i) => { const q = P[Math.min(i + 1, P.length - 1)], o = P[Math.max(i - 1, 0)];
+      const dx = q[0] - o[0], dy = q[1] - o[1], n = Math.hypot(dx, dy) || 1; return [p[0] - sgn * dy / n * g.w / 2, p[1] + sgn * dx / n * g.w / 2]; });
+    const A = side(1), B = side(-1).reverse();
+    K.shapes.push('M' + [...A, ...B].map(([x, y]) => `${X(x).toFixed(1)} ${Y(y).toFixed(1)}`).join('L') + 'Z');
+    if (m.fix === 'olhal') { const ro = (v.Fo || v.Bi + v.w) / 2, yc = g.yS + ro; K.shapes.push(_circ(X(0), Y(yc), ro * s) + _circ(X(0), Y(yc), v.Bi / 2 * s));
+      K.H(X(-v.Bi / 2), X(v.Bi / 2), Y(yc), Y(yc), `${Lk.Bi} = ${fm(v.Bi)}`);
+      if (v.Fo) K.H(X(-ro), X(ro), Y(yc + ro) - 14, Y(yc), `${Lk.Fo} = ${fm(v.Fo)}`); }
+    else { const hw = m.fix === 'clevis' ? v.w * 0.6 : v.w * 0.45; K.shapes.push(_rect(X(-hw), Y(g.yTop), 2 * hw * s, g.ha * s));
+      if (v.pin) { K.shapes.push(_circ(X(0), Y(g.yTop - g.ha * 0.55), v.pin / 2 * s)); K.txt(X(hw) + 8, Y(g.yTop - g.ha * 0.55) + 4, `pino Ø ${fm(v.pin)} (${Lk.pin})`, 'start'); } }
+    K.V(Y(g.yTop), Y(g.yBot), X(-v.W / 2) - 34, X(-v.W / 2), `${Lk.L} = ${fm(v.L)}`);
+    K.H(X(-v.W / 2), X(v.W / 2), Y(g.yBot) + 22, Y(g.yBot), `${Lk.W} = ${fm(v.W)}`);
+    const tip = P[P.length - 1], xi = -g.R + g.w / 2, xt = tip[0] - g.w / 2;
+    K.H(X(xi), X(xt), Y(tip[1]) - 10, Y(tip[1]), `${Lk.O} = ${fm(v.O)}`);
+    K.V(Y(g.yBot), Y(g.yBot + g.w), X(g.R * 0.25) + 0, X(0), `${Lk.w} = ${fm(v.w)}`);
+    K.txt(X(v.W / 2) + 10, Y(0), `seção do bojo: ${Lk.t} = ${fm(v.t)} × ${Lk.w} = ${fm(v.w)}`, 'start', 'nt');
+    return K.svg(W, Y(g.yBot) + 40, nome, ['medidas em mm, com as letras do catálogo',
+      'ilustrativo: curvatura do bojo (circular), ' + (m.fix === 'olhal' ? (v.Fo ? '' : 'espessura do olhal, ') : m.fix === 'clevis' ? 'garfo (o pino é do catálogo), ' : 'cabeça giratória, ') + 'trava não desenhada']);
   }
   if (m.tipo === 'olhal') {
     const totH = v.E + v.F + v.C, s = Math.min(300 / totH, 240 / Math.max(v.B, v.C)), cx = 200, yb = 30 + (v.C + v.F) * s;
@@ -213,6 +268,19 @@ function compBuild3d(T, m, kit) {
     if (v.C) for (const sx of [-1, 1]) cyl(v.C / 2, v.D || v.A, 'x', sx * legX, 0, 0);
     const pinL = v.I || (v.E + 2 * v.A + v.B);
     cyl(v.B / 2, pinL, 'x', 0, 0, 0, mat2);
+    return;
+  }
+  if (m.tipo === 'gancho') {
+    const g = hookGeom(m);
+    const curve = new T.CatmullRomCurve3(g.pts.map(([x, y]) => new T.Vector3(x, y, 0)));
+    const tube = new T.TubeGeometry(curve, 160, g.w / 2, 24, false); tube.scale(1, 1, v.t / v.w); addMesh(tube);
+    const tip = g.pts[g.pts.length - 1], cap = new T.SphereGeometry(g.w / 2, 24, 16); cap.scale(1, 1, v.t / v.w); cap.translate(tip[0], tip[1], 0); addMesh(cap);
+    if (m.fix === 'olhal') { const ro = (v.Fo || v.Bi + v.w) / 2, tor = new T.TorusGeometry((ro + v.Bi / 2) / 2, (ro - v.Bi / 2) / 2, 20, 48); tor.translate(0, g.yS + ro, 0); addMesh(tor); }
+    else if (m.fix === 'clevis') {
+      const h = g.ha, gap = v.t * 0.55;
+      for (const sz of [-1, 1]) { const b = new T.BoxGeometry(v.w * 1.2, h, (v.t - gap) / 2 + 2); b.translate(0, g.yTop - h / 2, sz * (gap / 2 + (v.t - gap) / 4)); addMesh(b); }
+      if (v.pin) cyl(v.pin / 2, v.t * 1.3, 'z', 0, g.yTop - h * 0.55, 0, mat2);
+    } else cyl(v.w * 0.45, g.ha, 'y', 0, g.yTop - g.ha / 2, 0, mat2);
     return;
   }
   if (m.tipo === 'olhal') {
