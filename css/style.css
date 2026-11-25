@@ -113,6 +113,11 @@ main:focus{outline:none}
 .chip{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border:1px solid var(--line);border-radius:3px;font-size:12.5px;color:var(--muted);background:var(--surface);white-space:nowrap}
 .fmeta .chip{white-space:normal;max-width:100%}
 .chip strong{color:var(--ink);font-weight:600}
+a.lnk{text-decoration:none;cursor:pointer}
+a.lnk:hover{border-color:var(--accent);color:var(--accent)}
+a.lnk:hover strong{color:var(--accent);text-decoration:underline}
+.ext{width:11px;height:11px;flex:none;vertical-align:-1px}
+.foot a{color:var(--accent)}
 
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
 @media (min-width:1100px){.gtabs,.ttabs,.ftabs,.fmk{flex-wrap:wrap;overflow:visible}.fmk{align-items:flex-start}.fmk>span{padding-top:7px}.ftabs.dense .fmk>span{padding-top:0}}
@@ -120,7 +125,14 @@ main:focus{outline:none}
 
 /* Filtros */
 .filters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end;padding:12px;background:var(--surface);border:1px solid var(--line);border-bottom:0;border-radius:6px 6px 0 0}
-.fld{display:flex;flex-direction:column;gap:3px}
+.fld{display:flex;flex-direction:column;gap:3px;min-width:0;max-width:100%}
+/* o select ganhava a largura da opção mais longa e empurrava o campo "valor" para fora do painel */
+.filters .fld{flex:1 1 200px}
+.filters .fld:has(.req){flex:2 1 320px}
+.filters .fld select{width:100%}
+.req{min-width:0;max-width:100%}
+.req select{flex:1 1 auto;min-width:0;width:auto}
+.req input{flex:0 0 96px}
 .fld label,.lbl{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .fld input,.fld select{height:34px;padding:0 9px;border:1px solid var(--line-ctl);border-radius:4px;background:var(--surface-2);min-width:0}
 .fld input:focus,.fld select:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 1px var(--accent)}
@@ -222,6 +234,13 @@ tbody tr.grp small{font:400 12px var(--f-body);letter-spacing:0;text-transform:n
 .out div{background:var(--surface-2);border:1px solid var(--line-2);border-radius:4px;padding:8px 10px}
 .out b{display:block;font-family:var(--f-mono);font-size:20px;font-weight:500;line-height:1.2}
 .out span{font-size:12px;color:var(--muted)}
+.draw.gdraw{padding:10px 12px 6px}
+.draw.gdraw svg{max-height:none;max-width:600px;margin:0 auto}
+.v3h{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.v3h h4{margin:0}
+.v3h .tg{height:30px;font-size:13px}
+.v3c{margin-top:8px;border:1px solid var(--line-2);border-radius:4px;background:var(--surface-2);overflow:hidden}
+.v3c canvas{display:block;width:100%!important;height:auto!important}
 .draw.gicon{display:flex;justify-content:center;padding:18px 8px}
 .draw.gicon svg{width:112px;height:88px;color:var(--ink-2)}
 .draw.gicon .rho{font-size:60px}

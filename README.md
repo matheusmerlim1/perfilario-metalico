@@ -36,7 +36,9 @@ js/formatacao.js        formatação de números
 js/geometria.js         propriedades (P, GROUPS) e cálculo geométrico das seções
 js/catalogo.js          famílias de aço (FAM) e linhas das tabelas
 js/desenho.js           cotas e desenho SVG da seção
-js/fabricantes.js       transforma os catálogos de fabricantes em famílias da navegação
+js/fabricantes.js       transforma os catálogos de fabricantes em famílias da navegação; links da fonte (SRC_URL)
+js/grade.js             grades de piso: medidas do catálogo → desenho em escala (corte, planta, elevação no vão)
+js/modelo3d.js          modelo 3D em escala (seção extrudada / grade), three.js carregado sob demanda
 js/app.js               estado, renderização e eventos
 js/portfolio-btn.js     posicionamento do botão de portfólio
 js/dados/perfis-gerdau.js   tabela Gerdau (W, HP, I, U, T, cantoneiras)

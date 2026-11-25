@@ -106,14 +106,58 @@ def classifica(fab, f):
         return 'Fusos trapezoidais', FUSO_TIPO.get(k, 'Fusos')
     return f.get('grupo') or 'Outros', f.get('tipo') or 'Outros'
 
+# ---------- links da fonte na internet ----------
+# url = onde o catálogo (ou a página do produto) está publicado; url_pag = True só quando o PDF publicado
+# é o MESMO arquivo transcrito (páginas conferidas), para o link abrir direto na página da tabela (#page=N).
+# Sem url = catálogo impresso/enviado pelo fabricante, sem cópia pública encontrada.
+CAT_URL = {
+    'tenax': ('https://www.tenax.com.br/tenax/produtos-2/chapas-e-placas-de-aco/', 'site', False),
+    'gran': ('https://www.granihc.com/', 'site', False),
+    'stratus': ('https://www.stratusfrp.com/', 'site', False),
+    'cogumelo': ('https://cogumelo.com.br/grades-de-piso/', 'site', False),
+    'siva': ('https://www.siva.com.br/downloads', 'site', False),
+    'greenpin': ('https://www.greenpin.com/br', 'site', False),
+    'conti': ('https://contigroup.it/wp-content/uploads/2026/11/catalogo-pt.pdf', 'pdf', True),
+    'hilti': ('https://www.dibt.de/en/service/approval-download/detail/eta-180972', 'site', False),
+}
+STRATUS_PAG = [  # (palavras no id, página do produto no site da Stratus)
+    (('gps', 'gis'), 'grades-de-piso'), (('degrau', 'escada'), 'escadas'), (('guarda',), 'guarda-corpos'),
+    (('eletroduto', 'condulete', 'eds-'), 'eletrodutos-e-conexoes'), (('leito',), 'leitos-para-cabos'),
+    (('eletrocalha',), 'eletrocalhas'),
+]
+
+def link_familia(fab, f):
+    i = f['id']
+    if fab == 'greenpin':
+        for n in f.get('notas', []):
+            m = re.match(r'Fonte:\s*(https?://\S+)', n)
+            if m:
+                return m.group(1)
+    if fab == 'stratus':
+        for ws, pag in STRATUS_PAG:
+            if any(w in i for w in ws):
+                return 'https://www.stratusfrp.com/' + pag
+        return 'https://www.stratusfrp.com/perfis-estruturais'
+    if fab == 'cogumelo':
+        if i == 'cogumelo-gm':
+            return 'https://cogumelo.com.br/grades-montadas/'
+        if i == 'cogumelo-gi':
+            return 'https://cogumelo.com.br/grades-injetadas/'
+    return None
+
 for old in OUT.glob('fab-*.js'):
     old.unlink()
 tags = []
 for p in arquivos:
     cat = json.loads(p.read_text(encoding='utf-8'))
     cat['sigla'] = p.stem
+    if p.stem in CAT_URL:
+        cat['url'], cat['url_tipo'], cat['url_pag'] = CAT_URL[p.stem]
     for f in cat.get('familias', []):
         f['grupo'], f['tipo'] = classifica(p.stem, f)
+        u = link_familia(p.stem, f)
+        if u:
+            f['url'] = u
     n =sum(len(f.get('itens', [])) for f in cat.get('familias', []))
     js = (f'/* {cat.get("fonte", p.stem)} — gerado por tools/gerar-dados.py a partir de dados/{p.name}; não edite à mão */\n'
           f'CATALOGOS.push({json.dumps(cat, ensure_ascii=False, separators=(",", ":"))});\n')

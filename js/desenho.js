@@ -162,7 +162,9 @@ function drawing(row, cfg) {
 
   /* eixos: rótulo y embaixo, ou em cima quando já há cota embaixo */
   let c = [0, 0];
-  if (o.rings && sh !== 'RHS') { const q = polyProps(o.rings); c = [q.xc, q.yc]; }
+  /* 2L: dois anéis independentes (não é furo), simétricos em x = 0 */
+  if (sh === '2L') c = [0, polyProps([o.rings[0]]).yc];
+  else if (o.rings && sh !== 'RHS') { const q = polyProps(o.rings); c = [q.xc, q.yc]; }
   if (sh === 'I' || sh === 'T') c[0] = 0;
   const cx = X(c[0]), cy = Y(c[1]);
   const ylY = cotas.some(q => q.side === 'B') ? T - 12 : B + 20;

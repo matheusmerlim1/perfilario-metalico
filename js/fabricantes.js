@@ -95,7 +95,9 @@ for (const cat of FAB) {
     }
     const f = {id: fj.id, group: fj.grupo || 'Outros', label: fj.label || fj.titulo, title: fj.titulo || fj.label, desc: fj.desc || '',
       tipo: fj.tipo || 'Outros', src: cat.fonte, maker: cat.fonte.split(' — ')[0], gen: true, props, main: props.m ? 'm' : Object.keys(props)[0], notas: fj.notas || [], paginas: fj.paginas || [],
-      iconKey: iconFor(fj, fj.tipo), massUnit: props.m ? props.m[1] : null};
+      iconKey: iconFor(fj, fj.tipo), massUnit: props.m ? props.m[1] : null,
+      /* link da fonte: página do produto, senão o catálogo; #page=N só quando o PDF publicado é o mesmo transcrito */
+      url: fj.url || cat.url || null, catUrl: cat.url || null, pdfPag: !!cat.url_pag && !fj.url};
     const sh = FAB_SHAPE[fj.icone];
     rows[f.id] = itens.map((it, i) => {
       const p = {...(it.p || {})};
@@ -110,6 +112,18 @@ for (const cat of FAB) {
 /* navegação em três níveis: categoria (aba) -> tipo de produto -> família.
    Os perfis de aço viram a categoria "Perfis de aço", com os grupos antigos como tipos. */
 for (const f of FAM) { f.tipo = f.group; f.group = f.rho ? 'Materiais' : 'Perfis de aço'; }
+/* onde cada tabela de perfis de aço está publicada (pdfPag = página da tabela no PDF publicado) */
+const SRC_URL = [
+  [f => f.id === 'w', 'https://gsn.gerdau.com/sites/gsn_gerdau/files/downloadable_files/Folder%20Perfis%20Estruturais%20Gerdau%20-%20Segmento%20Industrial.pdf', 3],
+  [f => f.src === 'Tabela Gerdau', 'https://gsn.gerdau.com/sites/gsn_gerdau/files/downloadable_files/catalogo-barras-e-perfis.pdf'],
+  [f => /^AISC/.test(f.src || ''), 'https://www.aisc.org/publications/steel-construction-manual-resources/16th-ed-steel-construction-manual/aisc-shapes-database-v15.0/'],
+  [f => /^DIN 1025/.test(f.src || ''), 'https://www.dinmedia.de/en/search?query=DIN%201025'],
+  [f => /^ArcelorMittal/.test(f.src || ''), 'https://sections.arcelormittal.com/library.html'],
+];
+for (const f of FAM) {
+  const m = SRC_URL.find(([t]) => t(f));
+  if (m) { f.url = m[1]; if (m[2]) f.paginas = [m[2]], f.pdfPag = true; }
+}
 const GROUP_ORDER = ['Perfis de aço', 'Chapas', 'Perfis de fibra de vidro', 'Grades e escadas', 'Eletrocalhas e perfilados',
   'Cabos e correntes', 'Içamento', 'Fixação', 'Fusos trapezoidais'];
 const gi = g => { const i = GROUP_ORDER.indexOf(g); return i < 0 ? 99 : i; };

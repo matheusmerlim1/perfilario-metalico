@@ -1,7 +1,7 @@
 /* ---------- estado ---------- */
 const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const S = {fam:'w', sel:{}, q:'', tg:new Set(), common:false, req:{k:'',v:''}, sort:null, L:{}, qty:1, mat:0, custom:null,
-  cHide:{}, cOff:COTA_OFF, cGap:COTA_GAP};
+  cHide:{}, cOff:COTA_OFF, cGap:COTA_GAP, v3:/[?&]3d\b/.test(location.search)};
 try {
   const c = JSON.parse(store.get('perfilario-cotas') || '{}');
   for (const k in c.hide || {}) S.cHide[k] = new Set(c.hide[k]);
@@ -14,6 +14,9 @@ const saveCotas = () => {
 };
 const $ = id => document.getElementById(id);
 const fam = () => famById[S.fam];
+/* link da fonte: no PDF publicado idêntico ao transcrito, abre direto na página da tabela */
+const srcHref = (f, p) => f.url + (f.pdfPag && p ? '#page=' + p : '');
+const EXT = '<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2v8h8V7M7 2h3v3M10 2L5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
 const val = (r, k) => r.p[k];
 /* definição de uma propriedade: a família do catálogo tem as suas; as de aço vêm de P */
 const PR = (f, k) => (f.props && f.props[k]) || P[k] || [k, '', 2, k];
@@ -111,9 +114,15 @@ function renderFamily() {
   if ($('fmore').hidden) $('fdesc').classList.remove('clamp');
   $('fcrumb').textContent = [f.group, f.tipo, f.maker].filter(Boolean).join('  ›  ');
   const all = rows[f.id];
-  const pg = f.paginas && f.paginas.length ? `<span class="chip">Catálogo: <strong>pág. ${f.paginas.length > 1 ? Math.min(...f.paginas) + '–' + Math.max(...f.paginas) : f.paginas[0]}</strong></span>` : '';
+  const pgTxt = f.paginas && f.paginas.length ? 'pág. ' + (f.paginas.length > 1 ? Math.min(...f.paginas) + '–' + Math.max(...f.paginas) : f.paginas[0]) : '';
+  const pg = !pgTxt ? '' : f.pdfPag && f.url
+    ? `<a class="chip lnk" href="${esc(srcHref(f, Math.min(...f.paginas)))}" target="_blank" rel="noopener" title="Abrir o catálogo publicado nesta página">Catálogo: <strong>${pgTxt}</strong> ${EXT}</a>`
+    : `<span class="chip">Catálogo: <strong>${pgTxt}</strong></span>`;
+  const fonte = f.url
+    ? `<a class="chip lnk" href="${esc(f.url)}" target="_blank" rel="noopener" title="Abrir a fonte na internet: ${esc(f.url)}">Fonte: <strong>${esc(f.src)}</strong> ${EXT}</a>`
+    : `<span class="chip" title="${f.gen ? 'Catálogo impresso do fabricante: não há cópia pública na internet' : 'Valores calculados pela geometria da seção'}">Fonte: <strong>${esc(f.src)}</strong>${f.gen ? ' · sem link público' : ''}</span>`;
   $('fmeta').innerHTML = `<span class="chip"><strong>${all.length}</strong> ${noun(f, all.length)}</span>
-    <span class="chip">Fonte: <strong>${esc(f.src)}</strong></span>${pg}
+    ${fonte}${pg}
     ${f.len ? `<span class="chip">Barra comercial: <strong>${f.len} m</strong></span>` : ''}`;
   const opt = (k, sel) => `<option value="${k}"${sel===k?' selected':''}>${esc(PR(f,k)[0])} · ${esc(PR(f,k)[3])}${PR(f,k)[1] ? ` (${esc(PR(f,k)[1])})` : ''}</option>`;
   const hasCommon = all.some(r => r.common);
@@ -233,10 +242,19 @@ function renderGenDetail(f) {
   }
   const L = mm && mm.lbl ? (S.L[f.id] ?? mm.def) : 1;
   S._r = r.shape ? r : null;
+  const gm = r.shape ? null : gradeModel(f, r);
+  const srcB = f.url ? `<a class="badge lnk" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.src)} — abrir a fonte">${esc(f.src.split(' — ')[0])} ${EXT}</a>`
+    : `<span class="badge" title="${esc(f.src)} (catálogo impresso, sem cópia pública)">${esc(f.src.split(' — ')[0])}</span>`;
+  const pgB = !f.paginas.length ? '' : f.pdfPag && f.url
+    ? f.paginas.map(p => `<a class="badge lnk" href="${esc(srcHref(f, p))}" target="_blank" rel="noopener" title="Abrir a tabela no catálogo publicado">pág. ${p} ${EXT}</a>`).join('')
+    : `<span class="badge">pág. ${f.paginas.join(', ')}</span>`;
   $('detail').innerHTML = `
     <div class="dh"><h3>${esc(r.name)}</h3>${r.sub ? `<div class="sub">${esc(r.sub)}</div>` : ''}
-      <div class="badges"><span class="badge" title="${esc(f.src)}">${esc(f.src.split(' — ')[0])}</span>${f.paginas.length ? `<span class="badge">pág. ${f.paginas.join(', ')}</span>` : ''}</div></div>
-    ${r.shape ? `<div class="draw" id="draw">${drawing(r, cotaCfg(f.id))}</div>${cotaBlock(f, r)}` : famIcon(f, true) ? `<div class="draw gicon">${famIcon(f)}</div>` : ''}
+      <div class="badges">${srcB}${pgB}</div></div>
+    ${r.shape ? `<div class="draw" id="draw">${drawing(r, cotaCfg(f.id))}</div>${cotaBlock(f, r)}`
+      : gm ? `<div class="draw gdraw" id="draw">${gradeDrawing(gm, r.name)}</div>`
+      : famIcon(f, true) ? `<div class="draw gicon">${famIcon(f)}</div>` : ''}
+    ${block3d(f, r)}
     ${mm ? `<div class="dsec"><h4>Massa</h4>
       <div class="calc">
         ${mm.lbl ? `<div class="fld"><label for="cL">${mm.lbl}</label><input id="cL" type="text" inputmode="decimal" value="${nf(L, Number.isInteger(L)?0:2)}"></div>` : ''}
@@ -247,9 +265,19 @@ function renderGenDetail(f) {
     <div class="dgroups">${groups.map(([t, ks]) => `<div class="dsec"><h4>${esc(t)}</h4><dl class="plist">${ks.map(k =>
       `<dt><span class="sy">${esc(PR(f,k)[0])}</span>${esc(PR(f,k)[3])}</dt><dd>${fv(r.p[k], dg(f,k))}<small>${esc(PR(f,k)[1])}</small></dd>`).join('')}</dl></div>`).join('')}</div>
     ${f.notas.length ? `<div class="dsec"><h4>Notas do catálogo</h4><ul class="notes">${f.notas.map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>` : ''}`;
+  after3d();
   S._m = mm ? r.p.m * mm.k : 0; S._u = null;
   updateCalc();
 }
+/* modelo 3D: botão no painel; fica aberto ao trocar de item (S.v3) */
+function block3d(f, r) {
+  close3d();
+  S._spec = model3dSpec(f, r);
+  if (!S._spec) return '';
+  return `<div class="dsec v3"><div class="v3h"><h4>Modelo 3D</h4><button class="tg${S.v3 ? ' on' : ''}" type="button" id="b3d" aria-expanded="${!!S.v3}">${S.v3 ? 'Fechar 3D' : 'Ver em 3D'}</button></div>
+    <p class="note" style="margin:2px 0 0">${esc(S._spec.txt)} · arraste para girar, role para aproximar</p><div id="v3" class="v3c"${S.v3 ? '' : ' hidden'}></div></div>`;
+}
+function after3d() { if (S.v3 && S._spec && $('v3')) open3d($('v3'), S._spec); }
 function renderDetail() {
   const f = fam();
   if (f.gen) return renderGenDetail(f);
@@ -280,6 +308,7 @@ function renderDetail() {
     <div class="dh"><h3>${esc(r.name)}</h3><div class="sub">${esc(r.sub)}</div><div class="badges">${badges}</div></div>
     <div class="draw" id="draw">${drawing(r, cotaCfg(f.id))}</div>
     ${cotaUI}
+    ${block3d(f, r)}
     <div class="dsec"><h4>Massa e pintura</h4>
       <div class="calc">
         <div class="fld"><label for="cL">Comprimento (m)</label><input id="cL" type="text" inputmode="decimal" value="${nf(L, Number.isInteger(L)?0:2)}"></div>
@@ -294,6 +323,7 @@ function renderDetail() {
     </div>
     <div class="dgroups">${groups.map(([t, ks]) => `<div class="dsec"><h4>${t}</h4><dl class="plist">${ks.map(k =>
       `<dt><span class="sy">${P[k][0]}</span>${P[k][3]}</dt><dd>${nf(k==='m'?m:r.p[k], k==='m'?Math.max(dg(f,k),2):dg(f,k))}<small>${P[k][1]}</small></dd>`).join('')}</dl></div>`).join('')}</div>`;
+  after3d();
   S._m = m; S._u = r.p.u;
   updateCalc();
 }
@@ -485,6 +515,12 @@ function redraw() { if (S._r && $('draw')) $('draw').innerHTML = drawing(S._r, c
 $('detail').addEventListener('click', e => {
   const id = e.target.id;
   if (id === 'dm-reset') { S.custom = null; renderDetail(); }
+  else if (id === 'b3d') {
+    S.v3 = !S.v3; const b = $('b3d');
+    b.classList.toggle('on', S.v3); b.textContent = S.v3 ? 'Fechar 3D' : 'Ver em 3D'; b.setAttribute('aria-expanded', S.v3);
+    $('v3').hidden = !S.v3;
+    if (S.v3) open3d($('v3'), S._spec); else close3d();
+  }
   else if (id === 'c-all' || id === 'c-none') {
     S.cHide[S.fam] = new Set(id === 'c-all' ? [] : cotaSpec(S._r.shape, S._r.dim, S._r.p).map(c => c.k));
     document.querySelectorAll('#detail [data-cota]').forEach(x => { x.checked = id === 'c-all'; });
@@ -500,5 +536,5 @@ $('detail').addEventListener('click', e => {
 const start = (location.hash || '').slice(1);
 S.fam = famById[start] ? start : (famById[store.get('perfilario-fam')] ? store.get('perfilario-fam') : 'w');
 if (FAB.length) $('fontes-fab').innerHTML = '<strong>Catálogos de fabricantes</strong> (valores transcritos; confira no catálogo original antes de especificar): ' +
-  FAB.map(c => esc(c.fonte)).join(' · ') + '.';
+  FAB.map(c => c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.fonte)}</a>` : esc(c.fonte) + ' (catálogo impresso, sem cópia pública)').join(' · ') + '.';
 renderFamily();
