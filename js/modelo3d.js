@@ -18,6 +18,8 @@ function model3dSpec(f, r) {
     const L = Math.max(300, Math.ceil(big * 5 / 100) * 100);
     return {kind: 'perfil', o, L, txt: `seção ${r.name} · trecho de ${smart(L)} mm`};
   }
+  const cm = typeof compModel === 'function' ? compModel(f, r) : null;
+  if (cm) return {kind: 'comp', m: cm, txt: COMP_TXT[cm.tipo](cm)};
   const g = gradeModel(f, r);
   if (g) {
     /* comprimento no sentido das barras: o lado do painel padrão que cobre o vão; sem painel, vão + 2 × 60 */
@@ -55,7 +57,8 @@ async function open3d(host, spec) {
   const addMesh = (geo, m = mat) => { const me = new T.Mesh(geo, m); root.add(me); root.add(new T.LineSegments(new T.EdgesGeometry(geo, 25), edgeM)); return me; };
   const box = (sx, sy, sz, x, y, z, m) => { const gq = new T.BoxGeometry(sx, sy, sz); gq.translate(x, y, z); return addMesh(gq, m); };
 
-  if (spec.kind === 'perfil') {
+  if (spec.kind === 'comp') compBuild3d(T, spec.m, {addMesh, mat, mat2, root});
+  else if (spec.kind === 'perfil') {
     const {o, L} = spec, shapes = [];
     if (o.circles) {
       const sh = new T.Shape(); sh.absarc(0, 0, o.circles[0], 0, Math.PI * 2, false);
@@ -92,7 +95,7 @@ async function open3d(host, spec) {
   /* câmera: enquadra o modelo */
   const bb = new T.Box3().setFromObject(root), ctr = bb.getCenter(new T.Vector3()), size = bb.getSize(new T.Vector3());
   root.position.sub(ctr);
-  const R = size.length() / 2; let dist = R / Math.sin(cam.fov * Math.PI / 360) * 0.78;
+  const R = size.length() / 2; let dist = R / Math.sin(cam.fov * Math.PI / 360) * 0.9;
   let rotX = 0.5, rotY = -0.7;
   const place = () => { cam.position.set(dist * Math.cos(rotX) * Math.sin(rotY), dist * Math.sin(rotX), dist * Math.cos(rotX) * Math.cos(rotY)); cam.lookAt(0, 0, 0); cam.near = dist / 100; cam.far = dist * 10; cam.updateProjectionMatrix(); };
   place();

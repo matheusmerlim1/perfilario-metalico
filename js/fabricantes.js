@@ -104,6 +104,8 @@ for (const cat of FAB) {
       if (it.m != null) p.m = it.m;
       const r = {id: `${f.id}-${i}`, name: it.nome, sub: it.sub || '', p, common: false};
       if (sh && sh[1].every(k => p[k] > 0)) { r.shape = sh[0]; r.dim = Object.fromEntries(sh[1].map(k => [k, p[k]])); }
+      /* tubo dado por Ø externo e Ø interno (eletrodutos): parede t = (D − d)/2 */
+      else if (fj.icone === 'tubo-r' && p.D > p.d && p.d > 0 && /interno/.test(((fj.props || {}).d || [])[2] || '')) { r.shape = 'CHS'; r.dim = {D: p.D, t: (p.D - p.d) / 2}; }
       return r;
     });
     genFams.push(f);

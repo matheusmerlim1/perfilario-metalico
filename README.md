@@ -21,6 +21,8 @@ Catálogo interativo de perfis metálicos estruturais e de produtos de catálogo
   - chumbador químico HIT-HY 200 (Hilti, ETA-18/0972).
 - **Navegação em três níveis:** categoria (Perfis de aço, Chapas, Grades e escadas, Içamento, Fixação…) → tipo de produto (Manilhas, Ganchos, Olhais…, cada um com seu desenho) → família, separada por fabricante. Tipos com muitas famílias viram uma lista compacta em colunas.
 - **Tabela enxuta:** a lista mostra só o nome e a massa (kg/m, kg/m², kg/peça, conforme o catálogo). Todas as dimensões e as demais propriedades ficam no painel da direita. "Ordenar por" e "Requisito mínimo" trazem mais uma coluna à tabela quando usados.
+- **Desenho em escala e modelo 3D:** grades de piso (corte, planta, elevação no vão), manilhas, olhais, fusos e porcas trapezoidais, cabos de aço, eletrodutos e todos os perfis; botão "Ver em 3D" (girar e aproximar). Medidas só do catálogo; derivadas marcadas com *.
+- **Link da fonte:** cada família aponta para a página do produto, o site do fabricante ou o PDF publicado (direto na página da tabela quando o PDF online é o mesmo transcrito).
 - **Desenho cotado da seção:** cotas com sigla e valor, configuráveis (quais aparecem, afastamento, valores editáveis nas famílias calculadas). Os perfis de fibra de vidro com d, bf, tw, tf também são desenhados.
 - **Filtros:** busca por nome ("w100x19", "W4x13") ou por qualquer medida ("100" lista toda bitola com alguma medida 100, mostrando qual; atalhos para as outras famílias que também têm a busca), requisito mínimo com destaque do item mais leve que atende, ordenação por qualquer propriedade.
 - **Massa:** massa total por comprimento, área ou quantidade, conforme a unidade da família.
@@ -38,6 +40,7 @@ js/catalogo.js          famílias de aço (FAM) e linhas das tabelas
 js/desenho.js           cotas e desenho SVG da seção
 js/fabricantes.js       transforma os catálogos de fabricantes em famílias da navegação; links da fonte (SRC_URL)
 js/grade.js             grades de piso: medidas do catálogo → desenho em escala (corte, planta, elevação no vão)
+js/componentes.js       manilhas, olhais, fusos/porcas trapezoidais (ISO 2904) e cabos: desenho cotado + 3D pelas colunas do catálogo
 js/modelo3d.js          modelo 3D em escala (seção extrudada / grade), three.js carregado sob demanda
 js/app.js               estado, renderização e eventos
 js/portfolio-btn.js     posicionamento do botão de portfólio

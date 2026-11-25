@@ -242,7 +242,7 @@ function renderGenDetail(f) {
   }
   const L = mm && mm.lbl ? (S.L[f.id] ?? mm.def) : 1;
   S._r = r.shape ? r : null;
-  const gm = r.shape ? null : gradeModel(f, r);
+  const gm = r.shape ? null : gradeModel(f, r), cm = r.shape || gm ? null : compModel(f, r);
   const srcB = f.url ? `<a class="badge lnk" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.src)} — abrir a fonte">${esc(f.src.split(' — ')[0])} ${EXT}</a>`
     : `<span class="badge" title="${esc(f.src)} (catálogo impresso, sem cópia pública)">${esc(f.src.split(' — ')[0])}</span>`;
   const pgB = !f.paginas.length ? '' : f.pdfPag && f.url
@@ -253,6 +253,7 @@ function renderGenDetail(f) {
       <div class="badges">${srcB}${pgB}</div></div>
     ${r.shape ? `<div class="draw" id="draw">${drawing(r, cotaCfg(f.id))}</div>${cotaBlock(f, r)}`
       : gm ? `<div class="draw gdraw" id="draw">${gradeDrawing(gm, r.name)}</div>`
+      : cm ? `<div class="draw gdraw" id="draw">${compDrawing(cm, r.name)}</div>`
       : famIcon(f, true) ? `<div class="draw gicon">${famIcon(f)}</div>` : ''}
     ${block3d(f, r)}
     ${mm ? `<div class="dsec"><h4>Massa</h4>
